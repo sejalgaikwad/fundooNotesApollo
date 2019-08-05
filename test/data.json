@@ -1,0 +1,27 @@
+{
+    "register": "mutation {register(firstname:\"test\",lastname:\"mocha\",email:\"test123@gmail.com\",password:\"testmocha123\"){message token success} }",
+   
+    "login": "mutation {login(email:\"sejalgaikwad24@gmail.com\",password:\"sejal2408@\") {message token success} }",
+   
+    "createLabel": "mutation {createLabel(labelName:\"Nodejs\") {message success}}",
+    
+    "updateLabel": "mutation {updateLabel(labelID:\"5d3ee2b12d544224c572c402\",newlabelName:\"SonarQube\") {message success}}",
+   
+    "removeLabel": "mutation {removeLabel(labelID:\"5d3eecc80dafd6368245fa40\") {message success}}",
+
+    "createNote": "mutation {createNote(labelID:\"5d3eed21ffaaa437666eb659\",title :\"abasdaaaacgjfhjfh\",description : \"accaadsfrdgdd\" ){message success}}",
+
+    "updateNote": "mutation {updateNote(noteID:\"5d4034c81fe9606e8f580a5f\",title:\"javaScripttt\",description:\"Express\"){message success}}",
+                                                                                          
+    "removeNote": "mutation {removeNote(noteID:\"5d4034c81fe9606e8f580a5f\"){message success}}",
+
+    "addReminder":"mutation {addReminder(noteID:\"5d4132fa6e4c0839440850ac\",reminder:\"2/5/2019\" ){message success}}",
+    
+    "archive":"mutation {archive(noteID:\"5d4132fa6e4c0839440850ad\"){message success}}",
+
+    "unarchive":"mutation {unarchive(noteID:\"5d4132fa6e4c0839440850ae\"){message success}}",
+
+    "trash":"mutation {trash(noteID:\"5d4132fa6e4c0839440850ae\"){message success}}",
+
+    "untrash":"mutation {untrash(noteID:\"5d4132fa6e4c0839440850ac\"){message success}}"
+}
