@@ -14,7 +14,7 @@ exports.User = async (root, args, context) => {
         if (context.token) {
             var payload = await jwt.verify(context.token, process.env.APP_SECRET)
             if (payload) {
-              var  user = await userModel.find({ _id: payload.user_ID })
+              var user = await userModel.find({ _id: payload.user_ID })
                 return user
             }
         }

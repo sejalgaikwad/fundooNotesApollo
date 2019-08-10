@@ -20,18 +20,25 @@ const trash= require('./mutation/noteMutation').trash
 const untrash= require('./mutation/noteMutation').untrash
 const addReminder=require('./mutation/noteMutation').addReminder
 const fetchGitRepo=require('./mutation/noteMutation').fetchGitRepo
-
+const createBranch=require('./mutation/gitMutation').createBranch
+const deleteBranch=require('./mutation/gitMutation').deleteBranch
+ const watchRepository=require('./mutation/gitMutation').watchRepository
+ const unwatchRepository=require('./mutation/gitMutation').unwatchRepository
+ const starRepository=require('./mutation/gitMutation').starRepository
+ const unstarRepository=require('./mutation/gitMutation').unstarRepository
+ 
 
 //require Query files
 const Users = require("./query").User
 
-
 // resolvers
 exports.resolvers = {
+    
     // Querys
     Query: {
         Users
     },
+
     // Mutations
     Mutation: {
         register,
@@ -53,7 +60,13 @@ exports.resolvers = {
         trash,
         untrash,
         addReminder,
-        fetchGitRepo
-      
+        fetchGitRepo,
+        createBranch,
+        deleteBranch,
+        watchRepository,
+        unwatchRepository,
+        starRepository,
+        unstarRepository
+             
     },
 }

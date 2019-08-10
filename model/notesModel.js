@@ -32,7 +32,7 @@ var notesSchema = Schema({
         default:false
     },
    
-    remainder: {
+    reminders: {
         type: Date
     },
     

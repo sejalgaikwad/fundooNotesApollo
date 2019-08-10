@@ -207,3 +207,74 @@
 {"message":"reminder not added successfully","level":"error"}
 {"message":"title is not defined","level":"error"}
 {"message":"response is not defined","level":"error"}
+{"message":"Cannot read property 'name' of undefined","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"note not exists","level":"error"}
+{"message":"note not exists","level":"error"}
+{"message":"note not exists","level":"error"}
+{"message":"note not exists","level":"error"}
+{"message":"note not exists","level":"error"}
+{"message":"note not exists","level":"error"}
+{"message":"note not exists","level":"error"}
+{"message":"note not exists","level":"error"}
+{"message":"note not exists","level":"error"}
+{"message":"note not exists","level":"error"}
+{"message":"note not exists","level":"error"}
+{"message":"note not exists","level":"error"}
+{"message":"note not exists","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"reminder not added successfully","level":"error"}
+{"message":"remainder is not defined","level":"error"}
+{"message":"remainder is not defined","level":"error"}
+{"message":"remainder is not defined","level":"error"}
+{"message":"note not exists","level":"error"}
+{"message":"note not exists","level":"error"}
+{"message":"note not exists","level":"error"}
+{"message":"authentication is not a function","level":"error"}
+{"message":"jwt is not defined","level":"error"}
+{"message":"Request failed with status code 401","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}
+{"message":"shaRes is not defined","level":"error"}
+{"message":"data is not defined","level":"error"}
+{"message":"Request failed with status code 422","level":"error"}
+{"message":"uri is not defined","level":"error"}
+{"message":"uri is not defined","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}
+{"message":"Request failed with status code 401","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}
+{"message":"only absolute urls are supported","level":"error"}
+{"message":"Request failed with status code 422","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}
+{"message":"query is not defined","level":"error"}
+{"message":"query is not defined","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}

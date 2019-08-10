@@ -14,7 +14,6 @@ const logger = require("../../services/logger").logger;
  * @param {*} context : context 
  */
 
-
 exports.oAuth = async (root, args, context) => {
     try {
         // check if code is provided
@@ -81,7 +80,6 @@ exports.oAuth = async (root, args, context) => {
     }
 }
 
-
 /**
  * @description : verify gitAccount
  * @purpose : verify gitAccount
@@ -89,6 +87,7 @@ exports.oAuth = async (root, args, context) => {
  * @param {*} args : arguments for resolver funtions
  * @param {*} context : context 
  */
+
 exports.verify = async (root, args, context) => {
     try {
         // check if token provided

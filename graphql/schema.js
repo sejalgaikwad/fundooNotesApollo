@@ -10,17 +10,11 @@ type User {
     imageUrl : String!
     message : String!
 }
-
-type repo {
-    isPrivate : Boolean
-    name : String
-}
   
  type Auth {
      message : String,
      token : String,
      success : Boolean!  
-     repo : [repo]
  }
 
  type label{
@@ -35,34 +29,7 @@ type repo {
      message : String!
  }
 
- type UserCommites {
-    repositoryCount : Int!
-    edges:[edges]
- }
-
- type edges {
-     node : node
- }
-
- type node {
-     name:String
-    commitComments:commitComments
- }
-
- type commitComments {
-    totalCount:Int!
-     nodes:[nodes]
- }
-
- type nodes {
-    commit : commitUrl
- }
-
- type commitUrl {
-    commitUrl:String
- }
-
- type Query {
+type Query {
      Users :[User]
  }
  
@@ -85,8 +52,15 @@ type repo {
     unarchive(noteID:String!):Auth
     trash(noteID:String!):Auth
     untrash(noteID:String!):Auth
-    addReminder(noteID:String!,reminder:String!):Auth
+    addReminder(noteID:String!,date:String!):Auth
     fetchGitRepo:Auth
+    createBranch(gitUserName:String!,repoName:String!,branchName:String!):Auth
+    deleteBranch(gitUserName:String!,repoName:String!,branchName:String!):Auth
+    watchRepository(watchRepository:String!,owner:String!):Auth
+    unwatchRepository(unwatchRepository:String!,owner:String!):Auth
+    starRepository(starRepository:String!,owner:String!):Auth
+    unstarRepository(unstarRepository:String!,owner:String!):Auth
+  
  }
 `;
 

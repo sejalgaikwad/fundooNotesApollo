@@ -121,9 +121,10 @@ exports.login = async (parent, args, context, info) => {
                 // Generate token
                 var token = jwt.sign({
                     "email": user[0].email,
-                    "user_ID": user[0].id
+                    "user_ID": user[0]._id
                 }, process.env.APP_SECRET);
-               
+                          
+            
                 var labels = await labelModel.find({  UserID: user[0]._id})
                
                 // add labels to redis
@@ -202,7 +203,6 @@ exports.forgotpassword = async (parent, args, context) => {
             return result
         }
     }
-
 }
 
 /**
@@ -253,7 +253,6 @@ exports.verifyEmail = async (parent, args, context) => {
             return result
         }
     }
-
 }
 
 /**
@@ -315,6 +314,5 @@ exports.resetpassword = async (parent, args, context) => {
             return result
         }
     }
-
 }
 
