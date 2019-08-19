@@ -12,8 +12,8 @@ type User {
 }
   
  type Auth {
-     message : String,
-     token : String,
+     message : String!
+     token : String!
      success : Boolean!  
  }
 
@@ -28,23 +28,27 @@ type User {
      description : String!
      message : String!
  }
-
-type Query {
-     Users :[User]
- }
  
- type Mutation{
-    register(firstname: String!,lastname: String!,email: String!, password: String!):Auth
-    login(email:String!,password:String!):Auth
+   type Query {
+    Users(userID:String!):[User]
+    searchNotesByTitle(title:String!):[notes]
+    searchNotesByDescription(description:String!):[notes]
+    label(labelID:String):[label]
+    }
+ 
+ type Mutation
+ {
+    register(firstname: String!, lastname: String!, email: String!, password: String!):Auth
+    login(email:String!, password:String!):Auth
     verifyEmail:Auth
-    resetpassword(confirmpassword:String!,password:String!):Auth
+    resetpassword(confirmpassword:String!, password:String!):Auth
     forgotpassword(email:String!):Auth
     createLabel(labelName:String!):Auth
     removeLabel(labelID:String!):Auth
-    updateLable(labelID:String!,newlabelName:String!):Auth
-    createNote(labelID:String!,title:String,description:String!):Auth
+    updateLable(labelID:String!, newlabelName:String!):Auth
+    createNote(labelID:String!, title:String, description:String!):Auth
     removeNote(noteID:String!):Auth
-    updateNote(noteID:String!,title:String,description:String!):Auth
+    updateNote(noteID:String!, title:String, description:String!):Auth
     oAuth:Auth
     gitVerify:Auth
     imageUpload:Auth
@@ -54,22 +58,16 @@ type Query {
     untrash(noteID:String!):Auth
     addReminder(noteID:String!,date:String!):Auth
     fetchGitRepo:Auth
-    createBranch(gitUserName:String!,repoName:String!,branchName:String!):Auth
-    deleteBranch(gitUserName:String!,repoName:String!,branchName:String!):Auth
-    watchRepository(watchRepository:String!,owner:String!):Auth
-    unwatchRepository(unwatchRepository:String!,owner:String!):Auth
-    starRepository(starRepository:String!,owner:String!):Auth
-    unstarRepository(unstarRepository:String!,owner:String!):Auth
-  
- }
-`;
-
+    createBranch(gitUserName:String!, repoName:String!, branchName:String!):Auth
+    deleteBranch(gitUserName:String!, repoName:String!, branchName:String!):Auth
+    watchRepository(watchRepository:String!, gitUserName:String!):Auth
+    unwatchRepository(unwatchRepository:String!, gitUserName:String!):Auth
+    starRepository(starRepository:String!, gitUserName:String!):Auth
+    unstarRepository(unstarRepository:String!, gitUserName:String!):Auth
+    addCollaborator(collaboratorID:String!, noteID:String!):Auth
+    removeCollaborator(collaboratorID:String!, noteID:String!):Auth
+   }`;
 module.exports = { typeDefs };
 
 
 
-
-
-
-
- 

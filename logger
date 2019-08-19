@@ -278,3 +278,57 @@
 {"message":"query is not defined","level":"error"}
 {"message":"Request failed with status code 404","level":"error"}
 {"message":"Request failed with status code 404","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}
+{"message":"Request failed with status code 404","level":"error"}
+{"message":"Request failed with status code 422","level":"error"}
+{"message":"Request failed with status code 422","level":"error"}
+{"message":"Request failed with status code 422","level":"error"}
+{"message":"Request failed with status code 422","level":"error"}
+{"message":"Request failed with status code 422","level":"error"}
+{"message":"Request failed with status code 422","level":"error"}
+{"message":"Request failed with status code 422","level":"error"}
+{"message":"note already colabrated","level":"error"}
+{"message":"note already colabrated","level":"error"}
+{"message":"colaboration remove unsuccessful","level":"error"}
+{"message":"colaboration remove unsuccessful","level":"error"}
+{"message":"user not found","level":"error"}
+{"message":"user not found","level":"error"}
+{"message":"user not found","level":"error"}
+{"message":"user not found","level":"error"}
+{"message":"user not found","level":"error"}
+{"message":"user not found","level":"error"}
+{"message":"user not found","level":"error"}
+{"message":"user not found","level":"error"}
+{"message":"user not found","level":"error"}
+{"message":"user not found","level":"error"}
+{"message":"user not found","level":"error"}
+{"message":"user not found","level":"error"}
+{"message":"user not found","level":"error"}
+{"message":"user not found","level":"error"}
+{"message":"user not found","level":"error"}
+{"message":"user not found","level":"error"}
+{"message":"user not found","level":"error"}
+{"message":"user not found","level":"error"}
+{"message":"collaboration remove unsuccessful","level":"error"}
+{"message":"token not provided","level":"error"}
+{"message":"authentication is not a function","level":"error"}
+{"message":"authentication is not a function","level":"error"}
+{"message":"authentication is not a function","level":"error"}
+{"message":"authentication is not a function","level":"error"}
+{"message":"no such collaborator user","level":"error"}
+{"message":"no such collaborator user","level":"error"}
+{"message":"no such collaborator user","level":"error"}
+{"message":"no such collaborator user","level":"error"}
+{"message":"no such collaborator user","level":"error"}
+{"message":"no such collaborator user","level":"error"}
+{"message":"no such collaborator user","level":"error"}
+{"message":"no such collaborator user","level":"error"}
+{"message":"no such collaborator user","level":"error"}
+{"message":"no such collaborator user","level":"error"}
+{"message":"note already collaborator","level":"error"}
+{"message":"note not found","level":"error"}
+{"message":"note not found","level":"error"}
+{"message":"note not found","level":"error"}
+{"message":"colabModel is not defined","level":"error"}
+{"message":"colabModel is not defined","level":"error"}
+{"message":"colabModel is not defined","level":"error"}

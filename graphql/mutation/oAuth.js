@@ -62,7 +62,7 @@ exports.oAuth = async (root, args, context) => {
             // send mail
             sendMail(url)
             return {
-                "message": "OAuth successfull",
+                "message": "OAuth successfully",
                 "success": true
             }
         } else {
@@ -112,14 +112,14 @@ exports.verify = async (root, args, context) => {
                     // set git verify true
                     if (gituser[0].gitVerify == true) {
                         return {
-                            "message": "Git login success",
+                            "message": "Git login successfully",
                             "success": true
                         }
                     }
                     // return git login unsucess
                     else {
                         return {
-                            "message": "git login unsuccess",
+                            "message": "git login unsuccessfully",
                             "success": false
                         }
                     }

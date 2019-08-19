@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const labelModel = require("../../model/labelModel");
 const logger = require("../../services/logger").logger;
-const authentication=require("../../services/authentication")
+const authentication = require("../../services/authentication")
 
 /**
  * @description : add labels
@@ -18,15 +18,15 @@ exports.createLabel = async (root, args, context) => {
     try {
         // check if token is provided
         if (context.token) {
-          
+
             var payload = await authentication(context.token)
-         
+
             if (payload) {
                 if (args.labelName.length < 3) {
                     throw new Error("label name should be have length of atleast 3")
                 }
                 console.log(payload.userID);
-                
+
                 // find if label name already exists for user
                 var presentlabel = await labelModel.find({
                     labelName: args.labelName,
@@ -99,21 +99,21 @@ exports.removeLabel = async (root, args, context) => {
                     "_id": args.labelID
                 });
                 if (removedlabel) {
-                    
+
                     return {
                         "message": "Label Removed",
                         "success": true
                     }
                 } else {
-                    
+
                     throw new Error("Unable to remove label")
                 }
             } else {
-            
+
                 throw new Error("Un Auth")
             }
         } else {
-           
+
             throw new Error("token not provideds")
         }
     } catch (err) {
@@ -164,13 +164,13 @@ exports.updateLabel = async (root, args, context) => {
                 })
                 console.log(updateLabel)
                 if (updateLabel) {
-                   
+
                     return {
-                        "message": "label update success",
+                        "message": "label update successfully",
                         "success": true
                     }
                 } else {
-    
+
                     throw new Error("label connot update")
                 }
 
@@ -192,6 +192,3 @@ exports.updateLabel = async (root, args, context) => {
         }
     }
 }
-
-
-

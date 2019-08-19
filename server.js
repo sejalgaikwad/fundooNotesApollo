@@ -7,6 +7,7 @@ const resolvers = require('./graphql/resolver').resolvers
 const dbConfig = require('./config/mongoDb');
 const redisConnection = require("./config/redis").redisConnection
 const port = process.env.PORT
+
 // redis connection
 redisConnection();
 

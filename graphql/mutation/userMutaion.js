@@ -47,22 +47,24 @@ exports.register = async (parent, args, context) => {
             "verified": false
         })
         // save user 
-        
+
         var saveUser = await newUser.save()
-        var token = jwt.sign({"email": args.email}, process.env.APP_SECRET);
+        var token = jwt.sign({
+            "email": args.email
+        }, process.env.APP_SECRET);
 
         var url = ` click on following link for email verification \n\n ${context.origin}/graphql?token=` + token;
         if (saveUser) {
             // send mail for email verification
             sendMail(url, args.email);
-            logger.info("registration success")
+            logger.info("registration successfully")
             return {
                 "message": "Check yours mail for email verification",
                 "success": true
             };
         } else {
             return {
-                "message": "registration unsucess",
+                "message": "registration unsucessfully",
                 "success": false
             }
         }
@@ -101,7 +103,7 @@ exports.login = async (parent, args, context, info) => {
         }
         // password verification
         if (args.password.length < 8) {
-          
+
             throw new Error("password must have atleast 8 char")
         }
         // check if user exists
@@ -109,10 +111,10 @@ exports.login = async (parent, args, context, info) => {
             "email": args.email
         })
 
-        console.log("user================>",user);
+        console.log("user================>", user);
         if (user.length > 0) {
             if (user[0].verified === false) {
-               
+
                 throw new Error("Email not varified")
             }
             // compare password
@@ -123,15 +125,17 @@ exports.login = async (parent, args, context, info) => {
                     "email": user[0].email,
                     "user_ID": user[0]._id
                 }, process.env.APP_SECRET);
-                          
-            
-                var labels = await labelModel.find({  UserID: user[0]._id})
-               
+
+
+                var labels = await labelModel.find({
+                    UserID: user[0]._id
+                })
+
                 // add labels to redis
                 await client.set("labels" + user[0]._id, JSON.stringify(labels))
-                logger.info("login success")
+                logger.info("login successfully")
                 return {
-                    "message": "login sucess",
+                    "message": "login sucessfully",
                     "token": token,
                     "success": true
                 }
@@ -173,22 +177,24 @@ exports.forgotpassword = async (parent, args, context) => {
         var user = await userModel.find({
             'email': args.email
         });
-       
-        
+
+
         if (user.length > 0) {
             // Send url with token for reseting password
-            var token = jwt.sign({email: args.email  }, process.env.APP_SECRET)
+            var token = jwt.sign({
+                email: args.email
+            }, process.env.APP_SECRET)
             var url = ` click on url to reset password \n\n ${context.origin}/graphql?token=` + token;
             // send mail for reset password
             sendMail(url, args.email)
             // return mail send messege
-            logger.info("forgot password success")
+            logger.info("forgot password successfully")
             return {
                 "message": "mail send to email",
                 "success": true
             }
         } else {
-           
+
             throw new Error("Invalid user")
         }
     } catch (err) {
@@ -220,7 +226,7 @@ exports.verifyEmail = async (parent, args, context) => {
     try {
         console.log(context.token)
         // verify token
-        let payload = await jwt.verify(context.token,process.env.APP_SECRET )
+        let payload = await jwt.verify(context.token, process.env.APP_SECRET)
         // if token is verified set varification true
         var updateUser = await userModel.updateOne({
             "email": payload.email
@@ -231,14 +237,14 @@ exports.verifyEmail = async (parent, args, context) => {
         })
         if (updateUser) {
             // return success message
-            logger.info("email verification success")
+            logger.info("email verification successfully")
             return {
-                "message": "email verification sucessful",
+                "message": "email verification sucessfully",
                 "success": true
             }
         } else {
-         
-            throw new Error("Email verification not successfull")
+
+            throw new Error("Email verification not successfully")
         }
 
     } catch (err) {
@@ -262,6 +268,7 @@ exports.verifyEmail = async (parent, args, context) => {
  * @param {*} args : arguments for resolver funtions
  * @param {*} context : context 
  */
+
 exports.resetpassword = async (parent, args, context) => {
     let result = {
         "message": "Something bad happened",
@@ -270,12 +277,12 @@ exports.resetpassword = async (parent, args, context) => {
     try {
         // check if password and confirmpassword match
         if (args.password !== args.confirmpassword) {
-           
+
             throw new Error("password does not match")
         }
         // check if password has min 8 length
         else if (args.password.length < 8) {
-            
+
             throw new Error("password length should be min 8")
         }
         console.log(context.token)
@@ -294,12 +301,12 @@ exports.resetpassword = async (parent, args, context) => {
         if (updateUser) {
             logger.info("password reset success")
             return {
-                "message": "update sucessful",
+                "message": "update sucessfully",
                 "success": true
             }
         } else {
-            
-            throw new Error("update unsuccessfull")
+
+            throw new Error("update unsuccessfully")
         }
 
     } catch (err) {
@@ -315,4 +322,3 @@ exports.resetpassword = async (parent, args, context) => {
         }
     }
 }
-

@@ -288,3 +288,166 @@ describe("Notes", () => {
             })
     })
 })
+
+
+/***********************************GITS TEST***********************************************/
+
+describe("GITS TESTS", () => {
+    
+    it("createBranch", (done) => {
+        test(process.env.URL)
+            .post('/graphql')
+            .query({
+                "token": access_token
+            })
+            .send({
+                query: test1().createBranch
+            })
+            .expect(200)
+            .end((err, res) => {
+                if (err) {
+                    return done(err);
+                }
+                expect(JSON.parse(res.text).data.createBranch.success).to.be.true
+                done();
+            })
+    })
+
+    it("deleteBranch", (done) => {
+        test(process.env.URL)
+            .post('/graphql')
+            .query({
+                "token": access_token
+            })
+            .send({
+                query: test1().deleteBranch
+            })
+            .expect(200)
+            .end((err, res) => {
+                if (err) {
+                    return done(err);
+                }
+                expect(JSON.parse(res.text).data.deleteBranch.success).to.be.true
+                done();
+            })
+    })
+
+    it("watchRepository", (done) => {
+        test(process.env.URL)
+            .post('/graphql')
+            .query({
+                "token": access_token
+            })
+            .send({
+                query: test1().watchRepository
+            })
+            .expect(200)
+            .end((err, res) => {
+                if (err) {
+                    return done(err);
+                }
+                expect(JSON.parse(res.text).data.watchRepository.success).to.be.true
+                done();
+            })
+    })
+
+    it("unwatchRepository", (done) => {
+        test(process.env.URL)
+            .post('/graphql')
+            .query({
+                "token": access_token
+            })
+            .send({
+                query: test1().unwatchRepository
+            })
+            .expect(200)
+            .end((err, res) => {
+                if (err) {
+                    return done(err);
+                }
+                expect(JSON.parse(res.text).data.unwatchRepository.success).to.be.true
+                done();
+            })
+    })
+
+    it("starRepository", (done) => {
+        test(process.env.URL)
+            .post('/graphql')
+            .query({
+                "token": access_token
+            })
+            .send({
+                query: test1().starRepository
+            })
+            .expect(200)
+            .end((err, res) => {
+                if (err) {
+                    return done(err);
+                }
+                expect(JSON.parse(res.text).data.starRepository.success).to.be.true
+                done();
+            })
+    })
+
+    it("unstarRepository", (done) => {
+        test(process.env.URL)
+            .post('/graphql')
+            .query({
+                "token": access_token
+            })
+            .send({
+                query: test1().unstarRepository
+            })
+            .expect(200)
+            .end((err, res) => {
+                if (err) {
+                    return done(err);
+                }
+                expect(JSON.parse(res.text).data.unstarRepository.success).to.be.true
+                done();
+            })
+    })
+
+
+
+it("removeCollaborator", (done) => {
+    test(process.env.URL)
+        .post('/graphql')
+        .query({
+            "token": access_token
+        })
+        .send({
+            query: test1().removeCollaborator
+        })
+        .expect(200)
+        .end((err, res) => {
+            if (err) {
+                return done(err);
+            }
+            expect(JSON.parse(res.text).data.removeCollaborator.success).to.be.true
+            done();
+        })
+})
+
+
+
+it("addCollaborator", (done) => {
+    test(process.env.URL)
+        .post('/graphql')
+        .query({
+            "token": access_token
+        })
+        .send({
+            query: test1().addCollaborator
+        })
+        .expect(200)
+        .end((err, res) => {
+            if (err) {
+                return done(err);
+            }
+            expect(JSON.parse(res.text).data.addCollaborator.success).to.be.true
+            done();
+        })
+})
+
+})

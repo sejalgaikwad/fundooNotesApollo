@@ -6,7 +6,7 @@ var notesSchema = Schema({
         type: Schema.Types.ObjectId,
         ref: 'userSchema'
     },
-   
+
     labelID: {
         type: Schema.Types.ObjectId,
         ref: 'labelSchema'
@@ -16,28 +16,27 @@ var notesSchema = Schema({
         type: String,
         require: [true, "title is required"]
     },
-    
+
     description: {
         type: String,
         require: [true, "description is required"]
     },
-    
-    archive:{
-        type:Boolean,
-        default:false
+
+    archive: {
+        type: Boolean,
+        default: false
     },
-    
-    trash:{
-        type:Boolean,
-        default:false
+
+    trash: {
+        type: Boolean,
+        default: false
     },
-   
+
     reminders: {
         type: Date
     },
-    
-}, 
-{
+
+}, {
     timestamps: true
 })
 

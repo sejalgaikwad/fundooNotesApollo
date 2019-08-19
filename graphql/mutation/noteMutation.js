@@ -24,7 +24,6 @@ exports.createNote = async (root, args, context) => {
                 var presentNote = await notesModel.find({
                     title: args.title,
                     UserID: payload.userID,
-
                 })
                 console.log(presentNote)
                 if (presentNote.length > 0) {
@@ -572,7 +571,6 @@ exports.fetchGitRepo = async (root, args, context) => {
                 var user = await userModel.find({
                     _id: payload.user_ID
                 });
-
                 // check if user is logged in using git
                 if (user.length == 0) {
                     return {
@@ -595,6 +593,7 @@ exports.fetchGitRepo = async (root, args, context) => {
                 let response = await axiosService('GET', url, access_token)
 
                 console.log("Git Repositories=========>")
+
                 for (var i = 0; i < response.data.length; i++) {
                     var findRepo = notesModel.find({
                         title: response.data[i].name

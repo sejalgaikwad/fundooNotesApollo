@@ -23,5 +23,22 @@
 
     "trash":"mutation {trash(noteID:\"5d4132fa6e4c0839440850ae\"){message success}}",
 
-    "untrash":"mutation {untrash(noteID:\"5d4132fa6e4c0839440850ac\"){message success}}"
+    "untrash":"mutation {untrash(noteID:\"5d4132fa6e4c0839440850ac\"){message success}}",
+
+    "createBranch": "mutation{createBranch(gitUserName:\"sejalgaikwad\" repoName:\"BLPrograms\" branchName:\"secondgfdn\"){message success}}",
+
+    "deleteBranch": "mutation{createBranch(gitUserName:\"sejalgaikwad\" repoName:\"BLPrograms\" branchName:\"secondgfdn\"){message success}}",
+
+    "watchRepository" :"mutation {watchRepository(gitUserName:\"sejalgaikwad\", watchRepository:\"BLPrograms\"){message success}}",
+
+    "unwatchRepository" :"mutation {unwatchRepository(gitUserName:\"sejalgaikwad\", unwatchRepository:\"BLPrograms\"){message success}}",
+
+    "starRepository" :"mutation {starRepository(gitUserName:\"sejalgaikwad\", starRepository:\"BLPrograms\"){message success}}",
+
+    "unstarRepository" :"mutation {unstarRepository(gitUserName:\"sejalgaikwad\", unstarRepository:\"BLPrograms\"){message success}}",
+
+    "removeCollaborator":"mutation{removeCollaborator(collaboratorID:\"5d53e93b644130613347b888\" noteID:\"5d48121cd7897c769920d866\"){message success}}",
+        
+    "addCollaborator":"mutation{addCollaborator(collaboratorID:\"5d53e93b644130613347b888\" noteID:\"5d48121cd7897c769920d866\"){message success}}"
+      
 }
