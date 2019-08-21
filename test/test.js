@@ -2,7 +2,6 @@ const chai = require('chai');
 const expect = chai.expect;
 const test = require('supertest')
 const fs = require("fs")
-const server = require('../server')
 var access_token = "";
 
 function test1() {

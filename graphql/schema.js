@@ -31,6 +31,7 @@ type User {
  
    type Query {
     Users(userID:String!):[User]
+    searchUser(email:String):[User]
     searchNotesByTitle(title:String!):[notes]
     searchNotesByDescription(description:String!):[notes]
     label(labelID:String):[label]

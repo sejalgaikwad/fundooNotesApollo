@@ -33,6 +33,7 @@ const Users = require("./query").User
 const searchNotesByTitle = require("./query").searchNotesByTitle
 const searchNotesByDescription = require("./query").searchNotesByDescription
 const label=require('./query').label
+const searchUser=require('./query').searchUser
 
 //resolvers
 exports.resolvers = {
@@ -40,6 +41,7 @@ exports.resolvers = {
     // Querys
     Query: {
         Users,
+        searchUser,
         label,
         searchNotesByTitle,
         searchNotesByDescription

@@ -19,5 +19,5 @@ var collaboratorSchema = Schema({
     {
         timestamps: true
     })
-var collaborateModel = Mongoose.model('collaboratorModel', collaboratorSchema);
+var collaborateModel = Mongoose.model('colbModel', collaboratorSchema);
 module.exports = collaborateModel;
