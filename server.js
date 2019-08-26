@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { ApolloServer } = require('apollo-server-express');
+const {ApolloServer} = require('apollo-server-express');
 const express = require('express');
 const { typeDefs } = require('./graphql/schema');
 const upload = require('./services/aws').upload;
@@ -27,11 +27,11 @@ const server = new ApolloServer({
 
 const app = express();
 
-app.use("*",upload.single('image'))
+app.use("*", upload.single('image'))
 
 server.applyMiddleware({ app });
 
- //  start server
+//  start server
 app.listen(port, () => {
   console.log("server started on " + port + "port")
 })

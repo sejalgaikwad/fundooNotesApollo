@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 function mongoConnect(){
    // connection to mongoose
-   mongoose.connect(process.env.MONGO_URL,{ useNewUrlParser: true });
+   mongoose.connect("mongodb://localhost:27017/apollo" ,{ useNewUrlParser: true });
    // mongoose disconnected 
    mongoose.connection.on('disconnected',function(){
        console.log("connection to mongoose disconnected");
