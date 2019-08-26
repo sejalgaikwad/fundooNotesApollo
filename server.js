@@ -6,7 +6,7 @@ const upload = require('./services/aws').upload;
 const resolvers = require('./graphql/resolver').resolvers
 const dbConfig = require('./config/mongoDb');
 const redisConnection = require("./config/redis").redisConnection
-const port = process.env.PORT
+//const port = process.env.PORT
 
 // redis connection
 redisConnection();
@@ -32,6 +32,6 @@ app.use("*", upload.single('image'))
 server.applyMiddleware({ app });
 
 //  start server
-app.listen(port, () => {
-  console.log("server started on " + port + "port")
+app.listen(4000, () => {
+  console.log("server started on  4000 port")
 })
