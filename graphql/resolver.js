@@ -34,6 +34,7 @@ const searchNotesByTitle = require("./query").searchNotesByTitle
 const searchNotesByDescription = require("./query").searchNotesByDescription
 const label=require('./query').label
 const searchUser=require('./query').searchUser
+const collaboratedNote=require('./query').collaboratedNote
 
 //resolvers
 exports.resolvers = {
@@ -44,7 +45,8 @@ exports.resolvers = {
         searchUser,
         label,
         searchNotesByTitle,
-        searchNotesByDescription
+        searchNotesByDescription,
+        collaboratedNote
      },
 
     // Mutations

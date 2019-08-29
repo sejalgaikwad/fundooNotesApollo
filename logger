@@ -352,3 +352,10 @@
 {"message":"no such collaborator user","level":"error"}
 {"message":"no such collaborator user","level":"error"}
 {"message":"no such collaborator user","level":"error"}
+{"message":"token not provided","level":"error"}
+{"message":"token not provided","level":"error"}
+{"message":"collboratorUser is not defined","level":"error"}
+{"message":"collboratorUser is not defined","level":"error"}
+{"message":"collboratorUser is not defined","level":"error"}
+{"message":"colModel is not defined","level":"error"}
+{"message":"colModel is not defined","level":"error"}

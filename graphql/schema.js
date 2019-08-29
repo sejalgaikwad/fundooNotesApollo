@@ -28,6 +28,11 @@ type User {
      description : String!
      message : String!
  }
+
+ type collaboratorNote {
+     NoteID:String!
+     collaboratorID:String!
+ }
  
    type Query {
     Users(userID:String!):[User]
@@ -35,6 +40,7 @@ type User {
     searchNotesByTitle(title:String!):[notes]
     searchNotesByDescription(description:String!):[notes]
     label(labelID:String):[label]
+    collaboratedNote( NoteID:String,UserID: String):[collaboratorNote]
     }
  
  type Mutation

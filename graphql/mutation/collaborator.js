@@ -13,8 +13,8 @@ const jwt = require('jsonwebtoken');
  * @param {*} context : context 
  */
 
-exports.addCollaborator = async (root, args, context) => {
 
+exports.addCollaborator = async (parent, args, context) => {
     let result = {
         "message": "Something bad happened",
         "success": false
@@ -22,56 +22,60 @@ exports.addCollaborator = async (root, args, context) => {
     try {
         if (context.token) {
             var payload = await jwt.verify(context.token, process.env.APP_SECRET)
-
+            console.log(payload.user_ID)
             var user = await userModel.find({
-                _id: payload.user_ID
-            })
+                "_id": payload.user_ID
+            });
+            
+            
             if (!user.length > 0) {
-                return {
-                    "message": "User not found"
-                }
+                throw new Error("user not found")
             }
+            var collaboratorUser = await userModel.find({
+                "_id": args.collaboratorID
+            })
 
+          
+            
+            if (!collaboratorUser.length > 0) {
+                throw new Error("no such collaborator user")
+            }
             var note = await noteModel.find({
-                _id: args.noteID
+                "_id": args.noteID
             })
+           
+            
             if (!note.length > 0) {
-                return {
-                    "message": "Note not found"
-                }
+                throw new Error("note not found")
             }
-
-            var collaboratorUser = await collaboratorModel.find({
-                _id: args.collaboratorID
+            var colab = await collaboratorModel.find({
+                collaboratorID: args.collaboratorID,
+                NoteID: args.noteID,
+                UserID: payload.user_ID,
             })
-
-            if (collaboratorUser.length > 0) {
+          
+            if (colab.length > 0) {
+                throw new Error("note already colabrated")
+            }
+            var newColab = new collaboratorModel({
+                "UserID": payload.user_ID,
+                "NoteID": args.noteID,
+                "collaboratorID": args.collaboratorID
+            })
+            var save = newColab.save()
+            if (save) {
+                var url = `you are collaborated successfully `
+                sendMail(url)
                 return {
-                    "message": "This user is already collaboratored"
+                    "message": "user collaborated successfully",
+                    "success": true
                 }
             } else {
-                if (!collaboratorUser)({
-                    "message": "not a fundoo user"
-                })
-                var url = "you have been collaborator successfully"
-                sendMail(url);
-
-                var newCollaborator = new collaboratorModel({
-                    UserID: payload.user_ID,
-                    NoteID: args.noteID,
-                    collaboratorID: args.collaboratorID
-                })
-                let save = await newCollaborator.save()
-                if (!save) {
-                    return {
-                        "message": err
-                    }
-                }
-                return {
-                    "message": "collaborator successfully"
-                }
+                throw new Error("colaboration unsuccessful")
             }
+
         }
+        throw new Error("token not provided")
     } catch (err) {
         logger.error(err.message)
         if (err instanceof ReferenceError ||
@@ -88,14 +92,13 @@ exports.addCollaborator = async (root, args, context) => {
 
 
 /**
- * @description       : remove collaborator
- * @purpose           : to remove collaborator from notes
- * @param {*} root    : result of previous resolve function
- * @param {*} args    : arguments for resolver funtions
+ * @description : remove collaborator
+ * @purpose : to remove collaborator from notes
+ * @param {*} root : result of previous resolve function
+ * @param {*} args : arguments for resolver funtions
  * @param {*} context : context 
  */
-
-exports.removeCollaborator = async (root, args, context) => {
+exports.removeCollaborator = async (parent, args, context) => {
     let result = {
         "message": "Something bad happened",
         "success": false
@@ -103,39 +106,45 @@ exports.removeCollaborator = async (root, args, context) => {
     try {
         if (context.token) {
             var payload = await jwt.verify(context.token, process.env.APP_SECRET)
-
+            console.log(payload.user_ID)
             var user = await userModel.find({
-                _id: payload.user_ID
-            })
-            var user = await userModel.find({
-                _id: payload.user_ID
-            })
+                "_id": payload.user_ID
+            });
             if (!user.length > 0) {
-                return {
-                    "message": "user not found"
-                }
+                throw new Error("user not found")
+            }
+            var collaboratorUser = await userModel.find({
+                "_id": args.collaboratorID
+            })
+            if (!collaboratorUser.length > 0) {
+                throw new Error("no such collaborator user")
             }
             var note = await noteModel.find({
-                _id: args.noteID
+                "_id": args.noteID
             })
             if (!note.length > 0) {
-                return {
-                    "message": "note not found"
-                }
+                throw new Error("note not found")
             }
-            var colab = await collaboratorModel.findOneAndRemove({
-                collaboratorID: args.collaboratorID
+            var colab = await collaboratorModel.findOneAndDelete({
+                collaboratorID: args.collaboratorID,
+                NoteID: args.noteID,
+                UserID: payload.user_ID,
             })
+            console.log(colab);
             if (colab) {
+                var url = `you are removed from collaborator with fundoo note by `
+                sendMail(url, collaboratorUser[0].email)
                 return {
-                    "message": "collaborator successfully deleted"
+                    "message": "colabrator removed from note",
+                    "success": true
                 }
+
             } else {
-                return {
-                    "message": "error while deleting the colaborator"
-                }
+                throw new Error("colaboration remove unsuccessful")
             }
+
         }
+        throw new Error("token not provided")
     } catch (err) {
         logger.error(err.message)
         if (err instanceof ReferenceError ||
@@ -149,3 +158,4 @@ exports.removeCollaborator = async (root, args, context) => {
         }
     }
 }
+

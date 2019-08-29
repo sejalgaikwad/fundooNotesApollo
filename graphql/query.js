@@ -1,6 +1,7 @@
 var userModel = require('../model/userModel')
 var notesModel = require('../model/notesModel')
 var labelModel = require('../model/labelModel')
+var collaboratorModel = require('../model/collaboratorModel')
 var jwt = require("jsonwebtoken");
 /**
  * @description       : get user
@@ -143,6 +144,40 @@ exports.searchNotesByDescription = async (root, args, context) => {
                 })
                 return notes
             }
+        } else {
+            return {
+                "message": "token not provided"
+            }
+        }
+    } catch (err) {
+        console.log(err)
+        return {
+            "message": "error occured",
+            "success": false
+        }
+    }
+}
+
+/**
+ * @description       : Search collaborator Note
+ * @param {*} root    : result of previous resolve function
+ * @param {*} args    : arguments for resolver funtions
+ * @param {*} context : context 
+ */
+
+exports.collaboratedNote = async (root, args, context) => {
+    try {
+        if (context.token) {
+            var payload = await jwt.verify(context.token, process.env.APP_SECRET)
+            if (payload) {
+                var collaboratedNote = await collaboratorModel.find({
+                    NoteID: args.NoteID,
+                    UserID: payload.user_ID
+                })
+                console.log("collaborate Note Count", collaboratedNote.length);
+                return collaboratedNote
+            }
+
         } else {
             return {
                 "message": "token not provided"
