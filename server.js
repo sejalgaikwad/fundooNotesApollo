@@ -4,20 +4,21 @@ const express = require('express');
 const {typeDefs} = require('./graphql/schema');
 const upload = require('./services/aws').upload;
 const resolvers = require('./graphql/resolver').resolvers
-const dbConfig = require('./config/mongoDb');
-const redisConnection = require("./config/redis").redisConnection
+const dbConfig = require('./config/mongoDb').mongoConnect();
+const redisConnection = require("./config/redis").redisConnect();
 //const port = process.env.PORT
 
 // redis connection
-redisConnection();
+//redisConnection();
 
 // connection to mongoose
-dbConfig.mongoConnect();
+//dbConfig.mongoConnect();
 
 const server = new ApolloServer({
+
   typeDefs,
-  resolvers,
-  context: ({
+    resolvers,
+   context: ({
     req
   }) => ({
     token: req.query.token,
@@ -29,11 +30,9 @@ const server = new ApolloServer({
 
 const app = express();
 
-app.use("*", upload.single('image'))
+//app.use("*", upload.single('image'))
 
-server.applyMiddleware({
-  app
-});
+server.applyMiddleware({ app });
 
 //  start server
 app.listen(4000, () => {

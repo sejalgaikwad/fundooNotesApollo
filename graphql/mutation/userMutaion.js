@@ -33,9 +33,12 @@ exports.register = async (parent, args, context) => {
             "email": args.email
         })
 
+        console.log(user.length);
         if (user.length > 0) {
             throw new Error("email already exists")
         }
+
+
         // encrypt password
         var hash = await bcrypt.hash(args.password, 10)
 
@@ -49,9 +52,7 @@ exports.register = async (parent, args, context) => {
         // save user 
 
         var saveUser = await newUser.save()
-        var token = jwt.sign({
-            "email": args.email
-        }, process.env.APP_SECRET);
+        var token = jwt.sign({ "email": args.email }, process.env.APP_SECRET);
 
         var url = ` click on following link for email verification \n\n ${context.origin}/graphql?token=` + token;
         if (saveUser) {
@@ -103,36 +104,22 @@ exports.login = async (parent, args, context, info) => {
         }
         // password verification
         if (args.password.length < 8) {
-
             throw new Error("password must have atleast 8 char")
         }
         // check if user exists
-        var user = await userModel.find({
-            "email": args.email
-        })
+        var user = await userModel.find({ "email": args.email })
 
         console.log("user================>", user);
         if (user.length > 0) {
             if (user[0].verified === false) {
-
                 throw new Error("Email not varified")
             }
             // compare password
             var valid = await bcrypt.compare(args.password, user[0].password)
             if (valid) {
                 // Generate token
-                var token = jwt.sign({
-                    "email": user[0].email,
-                    "user_ID": user[0]._id
-                }, process.env.APP_SECRET);
+                var token = jwt.sign({ "email": user[0].email, "user_ID": user[0]._id }, process.env.APP_SECRET);
 
-
-                var labels = await labelModel.find({
-                    UserID: user[0]._id
-                })
-
-                // add labels to redis
-                await client.set("labels" + user[0]._id, JSON.stringify(labels))
                 logger.info("login successfully")
                 return {
                     "message": "login sucessfully",
@@ -145,7 +132,6 @@ exports.login = async (parent, args, context, info) => {
         } else {
             throw new Error("Not registered")
         }
-
     } catch (err) {
         logger.error(err.message)
         if (err instanceof ReferenceError ||
@@ -177,13 +163,9 @@ exports.forgotpassword = async (parent, args, context) => {
         var user = await userModel.find({
             'email': args.email
         });
-
-
         if (user.length > 0) {
             // Send url with token for reseting password
-            var token = jwt.sign({
-                email: args.email
-            }, process.env.APP_SECRET)
+            var token = jwt.sign({ email: args.email }, process.env.APP_SECRET)
             var url = ` click on url to reset password \n\n ${context.origin}/graphql?token=` + token;
             // send mail for reset password
             sendMail(url, args.email)
@@ -218,6 +200,7 @@ exports.forgotpassword = async (parent, args, context) => {
  * @param {*} args : arguments for resolver funtions
  * @param {*} context : context 
  */
+
 exports.verifyEmail = async (parent, args, context) => {
     let result = {
         "message": "Something bad happened",
@@ -228,13 +211,7 @@ exports.verifyEmail = async (parent, args, context) => {
         // verify token
         let payload = await jwt.verify(context.token, process.env.APP_SECRET)
         // if token is verified set varification true
-        var updateUser = await userModel.updateOne({
-            "email": payload.email
-        }, {
-            $set: {
-                verified: true
-            }
-        })
+        var updateUser = await userModel.updateOne({ "email": payload.email }, {$set: { verified: true } })
         if (updateUser) {
             // return success message
             logger.info("email verification successfully")
@@ -243,7 +220,6 @@ exports.verifyEmail = async (parent, args, context) => {
                 "success": true
             }
         } else {
-
             throw new Error("Email verification not successfully")
         }
 
@@ -277,12 +253,10 @@ exports.resetpassword = async (parent, args, context) => {
     try {
         // check if password and confirmpassword match
         if (args.password !== args.confirmpassword) {
-
             throw new Error("password does not match")
         }
         // check if password has min 8 length
         else if (args.password.length < 8) {
-
             throw new Error("password length should be min 8")
         }
         console.log(context.token)
@@ -305,10 +279,8 @@ exports.resetpassword = async (parent, args, context) => {
                 "success": true
             }
         } else {
-
             throw new Error("update unsuccessfully")
         }
-
     } catch (err) {
         logger.error(err.message)
         if (err instanceof ReferenceError ||

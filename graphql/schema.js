@@ -63,7 +63,7 @@ type User {
     unarchive(noteID:String!):Auth
     trash(noteID:String!):Auth
     untrash(noteID:String!):Auth
-    addReminder(noteID:String!,date:String!):Auth
+    addReminder(noteID:String!,reminder:String!):Auth
     fetchGitRepo:Auth
     createBranch(gitUserName:String!, repoName:String!, branchName:String!):Auth
     deleteBranch(gitUserName:String!, repoName:String!, branchName:String!):Auth

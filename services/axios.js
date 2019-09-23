@@ -17,10 +17,10 @@ exports.axiosService = (method, url, access_token, data) => {
                 },
                 data: data
             })
-            .then(function (res) {
+            .then( (res)=> {
                 resolve(res)
             })
-            .catch(function (err) {
+            .catch((err)=> {
                 reject(err)
             })
     })

@@ -4,6 +4,7 @@ const userModel = require("../../model/userModel");
 const logger = require("../../services/logger").logger;
 const axiosService = require("../../services/axios").axiosService;
 
+
 /**
  * @description : add notes
  * @purpose : add notes
@@ -23,7 +24,7 @@ exports.createNote = async (root, args, context) => {
                 // find if label name already exists for user
                 var presentNote = await notesModel.find({
                     title: args.title,
-                    UserID: payload.userID,
+                    userID: payload.userID,
                 })
                 console.log(presentNote)
                 if (presentNote.length > 0) {
@@ -36,7 +37,7 @@ exports.createNote = async (root, args, context) => {
                 console.log(payload.userID)
                 var newNotes = new notesModel({
                     title: args.title,
-                    userID: payload.userID,
+                    UserID: payload.userID,
                     labelID: args.labelID,
                     description: args.description
                 })
@@ -227,10 +228,8 @@ exports.archive = async (root, args, context) => {
     // check if token provided
     try {
         if (context.token) {
-
             var payload = await jwt.verify(context.token, process.env.APP_SECRET)
             if (payload) {
-
                 var note = await notesModel.find({
                     _id: args.noteID
                 });
@@ -244,7 +243,6 @@ exports.archive = async (root, args, context) => {
                     // set reminder
                     var setArchive = await notesModel.findOneAndUpdate({
                         _id: args.noteID,
-
                     }, {
                         $set: {
                             archive: true
@@ -296,10 +294,8 @@ exports.unarchive = async (root, args, context) => {
     // check if token provided
     try {
         if (context.token) {
-
             var payload = await jwt.verify(context.token, process.env.APP_SECRET)
             if (payload) {
-
                 var note = await notesModel.find({
                     _id: args.noteID
                 });
@@ -313,7 +309,6 @@ exports.unarchive = async (root, args, context) => {
                     // set reminder
                     var setArchive = await notesModel.findOneAndUpdate({
                         _id: args.noteID,
-
                     }, {
                         $set: {
                             archive: false
@@ -325,15 +320,13 @@ exports.unarchive = async (root, args, context) => {
                             "success": true
                         }
                     } else {
-
-                        throw new Error("unarchive  unsuccessfully")
+                        throw new Error("unarchive unsuccessfully")
                     }
                 } else {
                     throw new Error("note not exists")
                 }
             }
         } else {
-
             throw new Error("token not provided")
         }
     } catch (err) {
@@ -368,7 +361,6 @@ exports.trash = async (root, args, context) => {
         if (context.token) {
             var payload = await jwt.verify(context.token, process.env.APP_SECRET)
             if (payload) {
-
                 var note = await notesModel.find({
                     _id: args.noteID
                 });
@@ -388,7 +380,6 @@ exports.trash = async (root, args, context) => {
                         }
                     })
                     if (setTrash) {
-
                         return {
                             "message": "trash  successfully",
                             "success": true
@@ -402,7 +393,6 @@ exports.trash = async (root, args, context) => {
                 }
             }
         } else {
-
             throw new Error("token not provided")
         }
     } catch (err) {
@@ -436,7 +426,6 @@ exports.untrash = async (root, args, context) => {
     // check if token provided
     try {
         if (context.token) {
-
             var payload = await jwt.verify(context.token, process.env.APP_SECRET)
             if (payload) {
                 var note = await notesModel.find({
@@ -460,19 +449,18 @@ exports.untrash = async (root, args, context) => {
                     if (setTrash) {
 
                         return {
-                            "message": "untrash  successfully",
+                            "message": "Untrash  Successfully",
                             "success": true
                         }
                     } else {
-                        throw new Error("untrash  unsuccessfully")
+                        throw new Error("Untrash  Unsuccessfully")
                     }
                 } else {
-                    throw new Error("note not exists")
+                    throw new Error("Note Not Exists")
                 }
             }
         } else {
-
-            throw new Error("token not provided")
+            throw new Error("Token not provided")
         }
     } catch (err) {
         logger.error(err.message)
@@ -509,15 +497,17 @@ exports.addReminder = async (root, args, context) => {
                 var note = await notesModel.find({
                     _id: args.noteID
                 });
+                var reminder = new Date(args.reminder)
 
-                var date = new Date(args.date)
+                
+
                 if (note.length > 0) {
                     // set reminder
                     var setReminder = await notesModel.findOneAndUpdate({
                         _id: args.noteID,
                     }, {
                         $set: {
-                            reminders: date
+                            reminders: reminder
                         }
                     })
                     if (setReminder) {
@@ -533,7 +523,6 @@ exports.addReminder = async (root, args, context) => {
                 }
             }
         } else {
-
             throw new Error("token not provided")
         }
     } catch (err) {
@@ -588,7 +577,6 @@ exports.fetchGitRepo = async (root, args, context) => {
                     // get git access_token of user
                     var access_token = user[0].gitToken;
                 }
-
                 let url = `${process.env.GIT_REPO}?access_token=${access_token}`
                 let response = await axiosService('GET', url, access_token)
 
@@ -599,7 +587,6 @@ exports.fetchGitRepo = async (root, args, context) => {
                         title: response.data[i].name
                     })
                     console.log(response.data[i].name);
-
                     if (!findRepo.length > 0) {
                         var noteModel = new notesModel({
                             title: response.data[i].name,
@@ -618,7 +605,6 @@ exports.fetchGitRepo = async (root, args, context) => {
                         "message": "git repository save Unsuccesfully",
                     }
                 }
-
             } else {
                 throw new Error("user not exists")
             }

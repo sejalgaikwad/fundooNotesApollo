@@ -17,11 +17,14 @@ exports.createBranch = async (root, args, context) => {
         "success": false
     }
     try {
+
         // check if token is provided
         if (context.token) {
+
             // verify token
             var payload = await jwt.verify(context.token, process.env.APP_SECRET)
             if (payload) {
+
                 // check if user is git user
                 var gitUser = await userModel.find({
                     _id: payload.user_ID
@@ -39,8 +42,8 @@ exports.createBranch = async (root, args, context) => {
                         "sha": shaRes.data[0].object.sha
                     }
                     await axiosService('POST', branchurl, access_token, data)
-                    // return branch created
 
+                    // return branch created
                     return {
                         "message": "Create Branch successfully",
                         "success": true
@@ -54,8 +57,6 @@ exports.createBranch = async (root, args, context) => {
         } else {
             throw new Error("token not provided")
         }
-
-
     } catch (err) {
         logger.error(err.message)
         if (err instanceof ReferenceError ||

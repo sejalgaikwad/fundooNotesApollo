@@ -4,6 +4,7 @@ const logger = require("./logger").logger;
 
 exports.sendEmailFunction = (url, email) => {
     try {
+        //
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -15,7 +16,7 @@ exports.sendEmailFunction = (url, email) => {
         // mail options
         const mailOptions = {
             from: 'FUNDOO MAILER',
-            to: "sejalgaikwad24@gmail.com",
+            to: "sejalgaikwad24@gmail.com",//email
             subject: 'FUNDOO-APP',
             text: url
         };
@@ -24,7 +25,9 @@ exports.sendEmailFunction = (url, email) => {
         transporter.sendMail(mailOptions, (err, info) => {
             if (err) {
                 throw new Error(err);
-            }
+            }else {
+                console.log('Email sent: ' + info.response);
+              }
         });
     } catch (err) {
         logger.error(err)

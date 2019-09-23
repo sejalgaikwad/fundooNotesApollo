@@ -5,7 +5,7 @@ let Schema = Mongoose.Schema;
 var labelSchema = Schema({
     UserID: {
         type: Schema.Types.ObjectId,
-        ref: 'userSchema',
+        ref: 'usermodels',
     },
     labelName: {
         type: String,

@@ -359,3 +359,34 @@
 {"message":"collboratorUser is not defined","level":"error"}
 {"message":"colModel is not defined","level":"error"}
 {"message":"colModel is not defined","level":"error"}
+{"message":"authentication is not a function","level":"error"}
+{"message":"authentication is not a function","level":"error"}
+{"message":"authentication is not a function","level":"error"}
+{"message":"authentication is not a function","level":"error"}
+{"message":"awaitjwt is not defined","level":"error"}
+{"message":"label already exits","level":"error"}
+{"message":"label already exits","level":"error"}
+{"message":"email already exists","level":"error"}
+{"message":"email already exists","level":"error"}
+{"message":"token not provided","level":"error"}
+{"message":"note already colabrated","level":"error"}
+{"message":"colaboration remove unsuccessful","level":"error"}
+{"message":"no such collaborator user","level":"error"}
+{"message":"colaboration remove unsuccessful","level":"error"}
+{"message":"colaboration remove unsuccessful","level":"error"}
+{"message":"colaboration remove unsuccessful","level":"error"}
+{"message":"colaboration remove unsuccessful","level":"error"}
+{"message":"colaboration remove unsuccessful","level":"error"}
+{"message":"notes is not defined","level":"error"}
+{"message":"Cannot read property 'length' of undefined","level":"error"}
+{"message":"Cannot read property 'length' of undefined","level":"error"}
+{"message":"Cannot read property 'length' of undefined","level":"error"}
+{"message":"token not provided","level":"error"}
+{"message":"Cast to date failed for value \"Invalid Date\" at path \"reminders\"","level":"error"}
+{"message":"Cast to date failed for value \"NaN\" at path \"reminders\"","level":"error"}
+{"message":"Cast to date failed for value \"NaN\" at path \"reminders\"","level":"error"}
+{"message":"Cast to date failed for value \"NaN\" at path \"reminders\"","level":"error"}
+{"message":"Cast to date failed for value \"NaN\" at path \"reminders\"","level":"error"}
+{"message":"Cast to date failed for value \"NaN\" at path \"reminders\"","level":"error"}
+{"message":"Cast to date failed for value \"NaN\" at path \"reminders\"","level":"error"}
+{"message":"Cast to date failed for value \"NaN\" at path \"reminders\"","level":"error"}

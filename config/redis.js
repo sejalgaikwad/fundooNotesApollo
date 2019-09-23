@@ -1,15 +1,22 @@
 const redis = require("async-redis");
-exports.redisConnection = function(){
-client = redis.createClient();
-client.on("connect",function(){
-    console.log(" redis connected  ")
-})
-client.on("error",function(){
-    console.log("error in redis connection ")
-    process.exit();
-})
-client.on("disconnect",function(){
-    console.log(" redis disconnected ")
-    process.exit();
-})
+
+function redisConnect() {
+
+    client = redis.createClient();
+
+    client.on("connect", () => {
+        console.log(" Redis connected  ")
+    })
+
+    client.on("error", (err) => {
+        console.log("ERROR in redis connection ",err)
+        process.exit();
+    })
+
+    client.on("disconnect", () => {
+        console.log(" Redis disconnected ")
+        process.exit();
+    })
 }
+module.exports = {redisConnect}
+    

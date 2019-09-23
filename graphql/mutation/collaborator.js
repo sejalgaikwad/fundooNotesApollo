@@ -23,55 +23,45 @@ exports.addCollaborator = async (parent, args, context) => {
         if (context.token) {
             var payload = await jwt.verify(context.token, process.env.APP_SECRET)
             console.log(payload.user_ID)
+
             var user = await userModel.find({
                 "_id": payload.user_ID
             });
-            
-            
             if (!user.length > 0) {
                 throw new Error("user not found")
             }
-            var collaboratorUser = await userModel.find({
-                "_id": args.collaboratorID
-            })
 
-          
-            
-            if (!collaboratorUser.length > 0) {
-                throw new Error("no such collaborator user")
-            }
             var note = await noteModel.find({
                 "_id": args.noteID
             })
-           
-            
             if (!note.length > 0) {
                 throw new Error("note not found")
             }
-            var colab = await collaboratorModel.find({
+
+            var collaborator = await collaboratorModel.find({
                 collaboratorID: args.collaboratorID,
                 NoteID: args.noteID,
                 UserID: payload.user_ID,
             })
-          
-            if (colab.length > 0) {
+
+            if (collaborator.length > 0) {
                 throw new Error("note already colabrated")
             }
-            var newColab = new collaboratorModel({
+            var newcollaborator = new collaboratorModel({
                 "UserID": payload.user_ID,
                 "NoteID": args.noteID,
                 "collaboratorID": args.collaboratorID
             })
-            var save = newColab.save()
+            var save = newcollaborator.save()
             if (save) {
-                var url = `you are collaborated successfully `
+                var url = "you are collaborated successfully"
                 sendMail(url)
                 return {
                     "message": "user collaborated successfully",
                     "success": true
                 }
             } else {
-                throw new Error("colaboration unsuccessful")
+                throw new Error("collaboration unsuccessful")
             }
 
         }
@@ -113,34 +103,35 @@ exports.removeCollaborator = async (parent, args, context) => {
             if (!user.length > 0) {
                 throw new Error("user not found")
             }
+
             var collaboratorUser = await userModel.find({
                 "_id": args.collaboratorID
             })
             if (!collaboratorUser.length > 0) {
                 throw new Error("no such collaborator user")
             }
+
             var note = await noteModel.find({
                 "_id": args.noteID
             })
             if (!note.length > 0) {
                 throw new Error("note not found")
             }
-            var colab = await collaboratorModel.findOneAndDelete({
+
+            var collaborator = await collaboratorModel.findOneAndDelete({
                 collaboratorID: args.collaboratorID,
                 NoteID: args.noteID,
                 UserID: payload.user_ID,
             })
-            console.log(colab);
-            if (colab) {
-                var url = `you are removed from collaborator with fundoo note by `
-                sendMail(url, collaboratorUser[0].email)
+            console.log(collaborator);
+            if (collaborator) {
                 return {
-                    "message": "colabrator removed from note",
+                    "message": "collabrator removed from note",
                     "success": true
                 }
 
             } else {
-                throw new Error("colaboration remove unsuccessful")
+                throw new Error("collaboration remove unsuccessful")
             }
 
         }
@@ -158,4 +149,3 @@ exports.removeCollaborator = async (parent, args, context) => {
         }
     }
 }
-
