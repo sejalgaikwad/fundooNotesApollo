@@ -14,12 +14,12 @@ var notesSchema = Schema({
 
     title: {
         type: String,
-        require: [true, "title is required"]
+        require: [true, 'title is required']
     },
 
     description: {
         type: String,
-        require: [true, "description is required"]
+        require: [true, 'description is required']
     },
 
     archive: {

@@ -390,3 +390,53 @@
 {"message":"Cast to date failed for value \"NaN\" at path \"reminders\"","level":"error"}
 {"message":"Cast to date failed for value \"NaN\" at path \"reminders\"","level":"error"}
 {"message":"Cast to date failed for value \"NaN\" at path \"reminders\"","level":"error"}
+{"message":"Not registered","level":"error"}
+{"message":"Not registered","level":"error"}
+{"message":"logger.err is not a function","level":"error"}
+{"level":"error","message":"not register"}
+{"message":"Not registered","level":"error"}
+{"message":"email already exists","level":"error"}
+{"message":"Email not varified","level":"error"}
+{"message":"jwt must be provided","level":"error"}
+{"message":"data is not defined","level":"error"}
+{"message":"data is not defined","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Email verification not successfully","level":"error"}
+{"message":"Cannot read property '_id' of undefined","level":"error"}
+{"message":"email already exists","level":"error"}
+{"message":"email already exists","level":"error"}
+{"message":"tokenName is not defined","level":"error"}
+{"message":"email already exists","level":"error"}
+{"message":"amqplib is not defined","level":"error"}
+{"message":"email already exists","level":"error"}

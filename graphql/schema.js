@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server');
+const { gql } = require('apollo-server')
 
 const typeDefs = gql`
 type User {
@@ -73,8 +73,5 @@ type User {
     unstarRepository(unstarRepository:String!, gitUserName:String!):Auth
     addCollaborator(collaboratorID:String!, noteID:String!):Auth
     removeCollaborator(collaboratorID:String!, noteID:String!):Auth
-   }`;
-module.exports = { typeDefs };
-
-
-
+   }`
+module.exports = { typeDefs }

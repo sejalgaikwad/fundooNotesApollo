@@ -1,5 +1,5 @@
-const jwt = require("jsonwebtoken")
-const userModel = require("../model/userModel")
+const jwt = require('jsonwebtoken')
+const userModel = require('../model/userModel')
 
 exports.authentication = async (token) => {
     return new Promise(async (resolve, reject) => {
@@ -10,12 +10,12 @@ exports.authentication = async (token) => {
                 resolve(payload)
             }
             else {
-                reject("user not found")
+                reject('user not found')
             }
         }
         catch (err) {
             console.log(err)
-            reject("un auth")
+            reject('un auth')
         }
     })
 }

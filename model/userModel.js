@@ -12,7 +12,7 @@ var userSchema = new schema({ // defining the mongodb schema
 
     email: {
         type: String,
-        unique: [true, "email already exists"]
+        unique: [true, 'email already exists']
     },
 
     password: {

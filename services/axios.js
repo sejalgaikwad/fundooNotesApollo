@@ -1,4 +1,4 @@
-const axios = require("axios")
+const axios = require('axios')
 
 /**
  * @exports axiosService
@@ -12,7 +12,7 @@ exports.axiosService = (method, url, access_token, data) => {
                 method: method,
                 url: url,
                 headers: {
-                    Accept: "application/json",
+                    Accept: 'application/json',
                     Authorization: `Bearer ${access_token}`
                 },
                 data: data

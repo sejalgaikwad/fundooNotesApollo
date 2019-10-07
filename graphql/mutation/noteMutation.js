@@ -1,21 +1,19 @@
-const jwt = require("jsonwebtoken");
-const notesModel = require("../../model/notesModel");
-const userModel = require("../../model/userModel");
-const logger = require("../../services/logger").logger;
-const axiosService = require("../../services/axios").axiosService;
-
-
+const jwt = require('jsonwebtoken')
+const notesModel = require('../../model/notesModel')
+const userModel = require('../../model/userModel')
+const logger = require('../../services/logger').logger
+const axiosService = require('../../services/axios').axiosService
 /**
  * @description : add notes
  * @purpose : add notes
  * @param {*} root : result of previous resolve function
  * @param {*} args : arguments for resolver funtions
- * @param {*} context : context 
+ * @param {*} context : context
  */
 exports.createNote = async (root, args, context) => {
-    let result = {
-        "message": "Something bad happened",
-        "success": false
+    const result = {
+        message: 'Something bad happened',
+        success: false
     }
     try {
         if (context.token) {
@@ -24,13 +22,13 @@ exports.createNote = async (root, args, context) => {
                 // find if label name already exists for user
                 var presentNote = await notesModel.find({
                     title: args.title,
-                    userID: payload.userID,
+                    userID: payload.userID
                 })
                 console.log(presentNote)
                 if (presentNote.length > 0) {
                     return {
-                        "message": "title already exits",
-                        "success": false
+                        message: 'title already exits',
+                        success: false
                     }
                 }
                 // save Notes
@@ -44,25 +42,25 @@ exports.createNote = async (root, args, context) => {
                 var saveNote = await newNotes.save()
                 if (saveNote) {
                     return {
-                        "message": "Note added",
-                        "success": true
+                        message: 'Note added',
+                        success: true
                     }
                 } else {
                     return {
-                        "message": "Note cannot be added",
-                        "success": false
+                        message: 'Note cannot be added',
+                        success: false
                     }
                 }
             } else {
                 return {
-                    "message": "Note cannot be added",
-                    "success": false
+                    message: 'Note cannot be added',
+                    success: false
                 }
             }
         } else {
             return {
-                "message": "token not provided",
-                "success": false
+                message: 'token not provided',
+                success: false
             }
         }
     } catch (err) {
@@ -71,9 +69,9 @@ exports.createNote = async (root, args, context) => {
             err instanceof SyntaxError ||
             err instanceof TypeError ||
             err instanceof RangeError) {
-            return result;
+            return result
         } else {
-            result.message = err.message;
+            result.message = err.message
             return result
         }
     }
@@ -84,12 +82,12 @@ exports.createNote = async (root, args, context) => {
  * @purpose : remove notes
  * @param {*} root : result of previous resolve function
  * @param {*} args : arguments for resolver funtions
- * @param {*} context : context 
+ * @param {*} context : context
  */
 exports.removeNote = async (root, args, context) => {
-    let result = {
-        "message": "Something bad happened",
-        "success": false
+    const result = {
+        message: 'Something bad happened',
+        success: false
     }
     try {
         // check if token is provided
@@ -98,33 +96,33 @@ exports.removeNote = async (root, args, context) => {
             var payload = await jwt.verify(context.token, process.env.APP_SECRET)
             if (payload) {
                 var removedNote = await notesModel.findOneAndDelete({
-                    "_id": args.noteID
-                });
+                    _id: args.noteID
+                })
                 if (removedNote) {
                     // return note removed
                     return {
-                        "message": "Note Removed",
-                        "success": true
+                        message: 'Note Removed',
+                        success: true
                     }
                 } else {
                     // return unable to remove note
                     return {
-                        "message": "Unable to remove Note",
-                        "success": false
+                        message: 'Unable to remove Note',
+                        success: false
                     }
                 }
             } else {
                 // return un authorized
                 return {
-                    "message": "Un Auth",
-                    "success": false
+                    message: 'Un Auth',
+                    success: false
                 }
             }
         } else {
             // return token not provided
             return {
-                "message": "token not provided",
-                "success": false
+                message: 'token not provided',
+                success: false
             }
         }
     } catch (err) {
@@ -134,9 +132,9 @@ exports.removeNote = async (root, args, context) => {
             err instanceof SyntaxError ||
             err instanceof TypeError ||
             err instanceof RangeError) {
-            return result;
+            return result
         } else {
-            result.message = err.message;
+            result.message = err.message
             return result
         }
     }
@@ -147,28 +145,27 @@ exports.removeNote = async (root, args, context) => {
  * @purpose : update notes
  * @param {*} root : result of previous resolve function
  * @param {*} args : arguments for resolver funtions
- * @param {*} context : context 
+ * @param {*} context : context
  */
-
 exports.updateNote = async (root, args, context) => {
-    let result = {
-        "message": "Something bad happened",
-        "success": false
+    const result = {
+        message: 'Something bad happened',
+        success: false
     }
     try {
         // check if token is provided
         if (context.token) {
             // check if labelName is given
-            if (args.title == 0 || args.description == 0) {
+            if (args.title === 0 || args.description === 0) {
                 return {
-                    "message": "title and description are required",
-                    "success": false
+                    message: 'title and description are required',
+                    success: false
                 }
             }
             // verify token
             var payload = await jwt.verify(context.token, process.env.APP_SECRET)
             if (payload) {
-                //find label of user and update
+                // find label of user and update
                 var updateNote = await notesModel.findOneAndUpdate({
                     _id: args.noteID
                 }, {
@@ -179,22 +176,22 @@ exports.updateNote = async (root, args, context) => {
                 if (updateNote) {
                     // return note update success
                     return {
-                        "message": "Note update success",
-                        "success": true
+                        message: 'Note update success',
+                        success: true
                     }
                 } else {
                     // return note connot update
                     return {
-                        "message": "Note connot update",
-                        "success": false
+                        message: 'Note connot update',
+                        success: false
                     }
                 }
             }
         } else {
             // return token not provided
             return {
-                "message": "token not provided",
-                "success": false
+                message: 'token not provided',
+                success: false
             }
         }
     } catch (err) {
@@ -204,9 +201,9 @@ exports.updateNote = async (root, args, context) => {
             err instanceof SyntaxError ||
             err instanceof TypeError ||
             err instanceof RangeError) {
-            return result;
+            return result
         } else {
-            result.message = err.message;
+            result.message = err.message
             return result
         }
     }
@@ -217,13 +214,12 @@ exports.updateNote = async (root, args, context) => {
  * @purpose : archive note
  * @param {*} root : result of previous resolve function
  * @param {*} args : arguments for resolver funtions
- * @param {*} context : context 
+ * @param {*} context : context
  */
-
 exports.archive = async (root, args, context) => {
-    let result = {
-        "message": "Something bad happened",
-        "success": false
+    const result = {
+        message: 'Something bad happened',
+        success: false
     }
     // check if token provided
     try {
@@ -232,17 +228,17 @@ exports.archive = async (root, args, context) => {
             if (payload) {
                 var note = await notesModel.find({
                     _id: args.noteID
-                });
-                if (note[0].archive == true) {
+                })
+                if (note[0].archive === true) {
                     return {
-                        "message": "Already Archive",
-                        "success": false
+                        message: 'Already Archive',
+                        success: false
                     }
                 }
-                if (note.length != 0) {
+                if (note.length !== 0) {
                     // set reminder
                     var setArchive = await notesModel.findOneAndUpdate({
-                        _id: args.noteID,
+                        _id: args.noteID
                     }, {
                         $set: {
                             archive: true
@@ -250,19 +246,18 @@ exports.archive = async (root, args, context) => {
                     })
                     if (setArchive) {
                         return {
-                            "message": "archive successfully",
-                            "success": true
+                            message: 'archive successfully',
+                            success: true
                         }
                     } else {
-
-                        throw new Error("archive  unsuccessfully")
+                        throw new Error('archive  unsuccessfully')
                     }
                 } else {
-                    throw new Error("note not exists")
+                    throw new Error('note not exists')
                 }
             }
         } else {
-            throw new Error("token not provided")
+            throw new Error('token not provided')
         }
     } catch (err) {
         logger.error(err.message)
@@ -270,9 +265,9 @@ exports.archive = async (root, args, context) => {
             err instanceof SyntaxError ||
             err instanceof TypeError ||
             err instanceof RangeError) {
-            return result;
+            return result
         } else {
-            result.message = err.message;
+            result.message = err.message
             return result
         }
     }
@@ -283,13 +278,12 @@ exports.archive = async (root, args, context) => {
  * @purpose unarchive note
  * @param {*} root result of previous resolve function
  * @param {*} args arguments for resolver funtions
- * @param {*} context context 
+ * @param {*} context context
  */
-
 exports.unarchive = async (root, args, context) => {
-    let result = {
-        "message": "Something bad happened",
-        "success": false
+    const result = {
+        message: 'Something bad happened',
+        success: false
     }
     // check if token provided
     try {
@@ -298,17 +292,17 @@ exports.unarchive = async (root, args, context) => {
             if (payload) {
                 var note = await notesModel.find({
                     _id: args.noteID
-                });
-                if (note[0].archive == false) {
+                })
+                if (note[0].archive === false) {
                     return {
-                        "message": "Already Unarchive",
-                        "success": false
+                        message: 'Already Unarchive',
+                        success: false
                     }
                 }
-                if (note.length != 0) {
+                if (note.length !== 0) {
                     // set reminder
                     var setArchive = await notesModel.findOneAndUpdate({
-                        _id: args.noteID,
+                        _id: args.noteID
                     }, {
                         $set: {
                             archive: false
@@ -316,18 +310,18 @@ exports.unarchive = async (root, args, context) => {
                     })
                     if (setArchive) {
                         return {
-                            "message": "unarchive successfully",
-                            "success": true
+                            message: 'unarchive successfully',
+                            success: true
                         }
                     } else {
-                        throw new Error("unarchive unsuccessfully")
+                        throw new Error('unarchive unsuccessfully')
                     }
                 } else {
-                    throw new Error("note not exists")
+                    throw new Error('note not exists')
                 }
             }
         } else {
-            throw new Error("token not provided")
+            throw new Error('token not provided')
         }
     } catch (err) {
         logger.error(err.message)
@@ -335,9 +329,9 @@ exports.unarchive = async (root, args, context) => {
             err instanceof SyntaxError ||
             err instanceof TypeError ||
             err instanceof RangeError) {
-            return result;
+            return result
         } else {
-            result.message = err.message;
+            result.message = err.message
             return result
         }
     }
@@ -348,13 +342,12 @@ exports.unarchive = async (root, args, context) => {
  * @purpose : trash note
  * @param {*} root : result of previous resolve function
  * @param {*} args : arguments for resolver funtions
- * @param {*} context : context 
+ * @param {*} context : context
  */
-
 exports.trash = async (root, args, context) => {
-    let result = {
-        "message": "Something bad happened",
-        "success": false
+    const result = {
+        message: 'Something bad happened',
+        success: false
     }
     // check if token provided
     try {
@@ -363,17 +356,17 @@ exports.trash = async (root, args, context) => {
             if (payload) {
                 var note = await notesModel.find({
                     _id: args.noteID
-                });
-                if (note[0].trash == true) {
+                })
+                if (note[0].trash === true) {
                     return {
-                        "message": "Already Trash",
-                        "success": false
+                        message: 'Already Trash',
+                        success: false
                     }
                 }
-                if (note.length != 0) {
+                if (note.length !== 0) {
                     // set reminder
                     var setTrash = await notesModel.findOneAndUpdate({
-                        _id: args.noteID,
+                        _id: args.noteID
                     }, {
                         $set: {
                             trash: true
@@ -381,19 +374,18 @@ exports.trash = async (root, args, context) => {
                     })
                     if (setTrash) {
                         return {
-                            "message": "trash  successfully",
-                            "success": true
+                            message: 'trash  successfully',
+                            success: true
                         }
                     } else {
-
-                        throw new Error("trash  unsuccessfully")
+                        throw new Error('trash  unsuccessfully')
                     }
                 } else {
-                    throw new Error("note not exists")
+                    throw new Error('note not exists')
                 }
             }
         } else {
-            throw new Error("token not provided")
+            throw new Error('token not provided')
         }
     } catch (err) {
         logger.error(err.message)
@@ -401,27 +393,25 @@ exports.trash = async (root, args, context) => {
             err instanceof SyntaxError ||
             err instanceof TypeError ||
             err instanceof RangeError) {
-            return result;
+            return result
         } else {
-            result.message = err.message;
+            result.message = err.message
             return result
         }
     }
 }
-
 
 /**
  * @description : untrash notes
  * @purpose : untrash note
  * @param {Object} root : result of previous resolve function
  * @param {Object} args : arguments for resolver funtions
- * @param {Object} context : context 
+ * @param {Object} context : context
  */
-
 exports.untrash = async (root, args, context) => {
-    let result = {
-        "message": "Something bad happened",
-        "success": false
+    const result = {
+        message: 'Something bad happened',
+        success: false
     }
     // check if token provided
     try {
@@ -430,37 +420,36 @@ exports.untrash = async (root, args, context) => {
             if (payload) {
                 var note = await notesModel.find({
                     _id: args.noteID
-                });
-                if (note[0].trash == false) {
+                })
+                if (note[0].trash === false) {
                     return {
-                        "message": "Already Untrash",
-                        "success": false
+                        message: 'Already Untrash',
+                        success: false
                     }
                 }
-                if (note.length != 0) {
+                if (note.length !== 0) {
                     // set reminder
                     var setTrash = await notesModel.findOneAndUpdate({
-                        _id: args.noteID,
+                        _id: args.noteID
                     }, {
                         $set: {
                             trash: false
                         }
                     })
                     if (setTrash) {
-
                         return {
-                            "message": "Untrash  Successfully",
-                            "success": true
+                            message: 'Untrash  Successfully',
+                            success: true
                         }
                     } else {
-                        throw new Error("Untrash  Unsuccessfully")
+                        throw new Error('Untrash  Unsuccessfully')
                     }
                 } else {
-                    throw new Error("Note Not Exists")
+                    throw new Error('Note Not Exists')
                 }
             }
         } else {
-            throw new Error("Token not provided")
+            throw new Error('Token not provided')
         }
     } catch (err) {
         logger.error(err.message)
@@ -468,26 +457,24 @@ exports.untrash = async (root, args, context) => {
             err instanceof SyntaxError ||
             err instanceof TypeError ||
             err instanceof RangeError) {
-            return result;
+            return result
         } else {
-            result.message = err.message;
+            result.message = err.message
             return result
         }
     }
 }
 
-
-/** 
+/**
  * @description       : add reminder to notes
  * @param {*} root    : result of previous resolve function
  * @param {*} args    : arguments for resolver funtions
- * @param {*} context    : context 
+ * @param {*} context    : context
  */
-
 exports.addReminder = async (root, args, context) => {
-    let result = {
-        "message": "Something bad happened",
-        "success": false
+    const result = {
+        message: 'Something bad happened',
+        success: false
     }
     // check if token provided
     try {
@@ -496,15 +483,12 @@ exports.addReminder = async (root, args, context) => {
             if (payload) {
                 var note = await notesModel.find({
                     _id: args.noteID
-                });
+                })
                 var reminder = new Date(args.reminder)
-
-                
-
                 if (note.length > 0) {
                     // set reminder
                     var setReminder = await notesModel.findOneAndUpdate({
-                        _id: args.noteID,
+                        _id: args.noteID
                     }, {
                         $set: {
                             reminders: reminder
@@ -512,18 +496,18 @@ exports.addReminder = async (root, args, context) => {
                     })
                     if (setReminder) {
                         return {
-                            "message": "set Reminder  successfully",
-                            "success": true
+                            message: 'set Reminder  successfully',
+                            success: true
                         }
                     } else {
-                        throw new Error("set Reminder  unsuccessfully")
+                        throw new Error('set Reminder  unsuccessfully')
                     }
                 } else {
-                    throw new Error("note not exists")
+                    throw new Error('note not exists')
                 }
             }
         } else {
-            throw new Error("token not provided")
+            throw new Error('token not provided')
         }
     } catch (err) {
         logger.error(err.message)
@@ -531,27 +515,25 @@ exports.addReminder = async (root, args, context) => {
             err instanceof SyntaxError ||
             err instanceof TypeError ||
             err instanceof RangeError) {
-            return result;
+            return result
         } else {
-            result.message = err.message;
+            result.message = err.message
             return result
         }
     }
 }
-
 
 /**
  * @description : save git repositories name as title of notes
  * @purpose : To save git repositories name as title of notes
  * @param {*} root : result of previous resolve funtion
  * @param {*} args : arguments for resolver funtions
- * @param {*} context : context 
+ * @param {*} context : context
  */
-
 exports.fetchGitRepo = async (root, args, context) => {
-    let result = {
-        "message": "Something bad happened",
-        "success": false
+    const result = {
+        message: 'Something bad happened',
+        success: false
     }
     try {
         if (context.token) {
@@ -559,58 +541,58 @@ exports.fetchGitRepo = async (root, args, context) => {
             if (payload) {
                 var user = await userModel.find({
                     _id: payload.user_ID
-                });
+                })
                 // check if user is logged in using git
-                if (user.length == 0) {
+                if (user.length === 0) {
                     return {
-                        "message": "not git user",
-                        "success": false
+                        message: 'not git user',
+                        success: false
                     }
                 }
-                if (user[0].gitVerify == false) {
+                if (user[0].gitVerify === false) {
                     // return not git user
                     return {
-                        "message": "git user not verified",
-                        "success": false
+                        message: 'git user not verified',
+                        success: false
                     }
                 } else {
                     // get git access_token of user
-                    var access_token = user[0].gitToken;
+                    var access_token = user[0].gitToken
                 }
-                let url = `${process.env.GIT_REPO}?access_token=${access_token}`
-                let response = await axiosService('GET', url, access_token)
+                const url = `${process.env.GIT_REPO}?access_token=${access_token}`
+                const response = await axiosService('GET', url, access_token)
 
-                console.log("Git Repositories=========>")
+                console.log('Git Repositories=========>')
 
                 for (var i = 0; i < response.data.length; i++) {
                     var findRepo = notesModel.find({
                         title: response.data[i].name
                     })
-                    console.log(response.data[i].name);
+                    console.log(response.data[i].name)
                     if (!findRepo.length > 0) {
                         var noteModel = new notesModel({
                             title: response.data[i].name,
                             description: response.data[i].name,
                             UserID: payload.user_ID
-                        });
+                        })
                         var noteSaved = await noteModel.save()
                     }
                 }
                 if (noteSaved) {
                     return {
-                        "message": "git repository save succesfully",
+                        message: 'git repository save succesfully'
                     }
                 } else {
                     return {
-                        "message": "git repository save Unsuccesfully",
+                        message: 'git repository save Unsuccesfully'
                     }
                 }
             } else {
-                throw new Error("user not exists")
+                throw new Error('user not exists')
             }
         } else {
             return {
-                "message": "token not provided"
+                message: 'token not provided'
             }
         }
     } catch (err) {
@@ -619,9 +601,9 @@ exports.fetchGitRepo = async (root, args, context) => {
             err instanceof SyntaxError ||
             err instanceof TypeError ||
             err instanceof RangeError) {
-            return result;
+            return result
         } else {
-            result.message = err.message;
+            result.message = err.message
             return result
         }
     }
