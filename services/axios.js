@@ -1,4 +1,4 @@
-const axios = require('axios')
+const axios = require('axios');
 
 /**
  * @exports axiosService
@@ -9,19 +9,19 @@ const axios = require('axios')
 exports.axiosService = (method, url, access_token, data) => {
     return new Promise((resolve, reject) => {
         axios({
-                method: method,
-                url: url,
-                headers: {
-                    Accept: 'application/json',
-                    Authorization: `Bearer ${access_token}`
-                },
-                data: data
-            })
+            method: method,
+            url: url,
+            headers: {
+                Accept: 'application/json',
+                Authorization: `Bearer ${access_token}`
+            },
+            data: data
+        })
             .then( (res)=> {
-                resolve(res)
+                resolve(res);
             })
             .catch((err)=> {
-                reject(err)
-            })
-    })
-}
+                reject(err);
+            });
+    });
+};

@@ -1,8 +1,8 @@
-var userModel = require('../model/userModel')
-var notesModel = require('../model/notesModel')
-var labelModel = require('../model/labelModel')
-var collaboratorModel = require('../model/collaboratorModel')
-var jwt = require('jsonwebtoken')
+var userModel = require('../model/userModel');
+var notesModel = require('../model/notesModel');
+var labelModel = require('../model/labelModel');
+var collaboratorModel = require('../model/collaboratorModel');
+var jwt = require('jsonwebtoken');
 
 /**
  * @description       : Search Users By Id
@@ -14,23 +14,22 @@ exports.User = async (root, args) => {
     try {
         var user = await userModel.find({
             _id: args.userID
-        })
+        });
 
         if (user.length > 0) {
-            return user
+            return user;
         } else {
             return {
                 message: 'no user found'
-            }
+            };
         }
     } catch (err) {
-        console.log('ERROR', err)
+        console.log('ERROR', err);
         return {
             message: 'something went wrong'
-        }
+        };
     }
-}
-
+};
 /**
  * @description       : Search Users By Email
  * @param {*} root    : result of previous resolve function
@@ -44,22 +43,22 @@ exports.searchUser = async (root, args) => {
                 $regex: args.email,
                 $options: 'i'
             }
-        })
+        });
 
         if (user.length > 0) {
-            return user
+            return user;
         } else {
             return {
                 message: 'no user found'
-            }
+            };
         }
     } catch (err) {
-        console.log('ERROR', err)
+        console.log('ERROR', err);
         return {
             message: 'something went wrong'
-        }
+        };
     }
-}
+};
 
 /**
  * @description       :  Search Label By ID
@@ -71,22 +70,22 @@ exports.label = async (root, args) => {
     try {
         var label = await labelModel.find({
             _id: args.labelID
-        })
+        });
 
         if (label.length > 0) {
-            return label
+            return label;
         } else {
             return {
                 message: 'No user found'
-            }
+            };
         }
     } catch (err) {
-        console.log('ERROR', err)
+        console.log('ERROR', err);
         return {
             message: 'something went wrong'
-        }
+        };
     }
-}
+};
 
 /**
  * @description       : Search Notes By Title
@@ -97,7 +96,7 @@ exports.label = async (root, args) => {
 exports.searchNotesByTitle = async (root, args, context) => {
     try {
         if (context.token) {
-            var payload = await jwt.verify(context.token, process.env.APP_SECRET)
+            var payload = await jwt.verify(context.token, process.env.APP_SECRET);
             if (payload) {
                 var notes = await notesModel.find({
                     title: {
@@ -105,23 +104,23 @@ exports.searchNotesByTitle = async (root, args, context) => {
                         $options: 'i'
                     },
                     UserID: payload.user_ID
-                })
-                console.log(notes)
-                return notes
+                });
+                console.log(notes);
+                return notes;
             }
         } else {
             return {
                 message: 'token not provided'
-            }
+            };
         }
     } catch (err) {
-        console.log(err)
+        console.log(err);
         return {
             message: 'error occured',
             success: false
-        }
+        };
     }
-}
+};
 
 /**
  * @description       : Search Notes By Description
@@ -132,7 +131,7 @@ exports.searchNotesByTitle = async (root, args, context) => {
 exports.searchNotesByDescription = async (root, args, context) => {
     try {
         if (context.token) {
-            var payload = await jwt.verify(context.token, process.env.APP_SECRET)
+            var payload = await jwt.verify(context.token, process.env.APP_SECRET);
             if (payload) {
                 var notes = await notesModel.find({
                     description: {
@@ -140,22 +139,22 @@ exports.searchNotesByDescription = async (root, args, context) => {
                         $options: 'i'
                     },
                     UserID: payload.user_ID
-                })
-                return notes
+                });
+                return notes;
             }
         } else {
             return {
                 message: 'token not provided'
-            }
+            };
         }
     } catch (err) {
-        console.log(err)
+        console.log(err);
         return {
             message: 'error occured',
             success: false
-        }
+        };
     }
-}
+};
 
 /**
  * @description       : Search collaborator Note
@@ -166,25 +165,25 @@ exports.searchNotesByDescription = async (root, args, context) => {
 exports.collaboratedNote = async (root, args, context) => {
     try {
         if (context.token) {
-            var payload = await jwt.verify(context.token, process.env.APP_SECRET)
+            var payload = await jwt.verify(context.token, process.env.APP_SECRET);
             if (payload) {
                 var collaboratedNote = await collaboratorModel.find({
                     NoteID: args.NoteID,
                     UserID: payload.user_ID
-                })
-                console.log('collaborate Note Count', collaboratedNote.length)
-                return collaboratedNote
+                });
+                console.log('collaborate Note Count', collaboratedNote.length);
+                return collaboratedNote;
             }
         } else {
             return {
                 message: 'token not provided'
-            }
+            };
         }
     } catch (err) {
-        console.log(err)
+        console.log(err);
         return {
             message: 'error occured',
             success: false
-        }
+        };
     }
-}
+};

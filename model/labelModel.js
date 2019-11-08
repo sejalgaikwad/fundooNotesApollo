@@ -12,9 +12,9 @@ var labelSchema = Schema({
         require: [true, 'labelName is required']
     }
 },
-    {
-        timestamps: true
-    })
+{
+    timestamps: true
+});
 
 var labelModel = Mongoose.model('labelModel', labelSchema);
 module.exports = labelModel;

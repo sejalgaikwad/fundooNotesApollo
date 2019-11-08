@@ -38,7 +38,7 @@ var notesSchema = Schema({
 
 }, {
     timestamps: true
-})
+});
 
 var notesModel = Mongoose.model('notesModel', notesSchema);
 

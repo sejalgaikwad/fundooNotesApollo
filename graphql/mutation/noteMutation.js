@@ -1,8 +1,8 @@
-const jwt = require('jsonwebtoken')
-const notesModel = require('../../model/notesModel')
-const userModel = require('../../model/userModel')
-const logger = require('../../services/logger').logger
-const axiosService = require('../../services/axios').axiosService
+const jwt = require('jsonwebtoken');
+const notesModel = require('../../model/notesModel');
+const userModel = require('../../model/userModel');
+const logger = require('../../services/logger').logger;
+const axiosService = require('../../services/axios').axiosService;
 /**
  * @description : add notes
  * @purpose : add notes
@@ -14,68 +14,68 @@ exports.createNote = async (root, args, context) => {
     const result = {
         message: 'Something bad happened',
         success: false
-    }
+    };
     try {
         if (context.token) {
-            var payload = await jwt.verify(context.token, process.env.APP_SECRET)
+            var payload = await jwt.verify(context.token, process.env.APP_SECRET);
             if (payload) {
                 // find if label name already exists for user
                 var presentNote = await notesModel.find({
                     title: args.title,
                     userID: payload.userID
-                })
-                console.log(presentNote)
+                });
+                console.log(presentNote);
                 if (presentNote.length > 0) {
                     return {
                         message: 'title already exits',
                         success: false
-                    }
+                    };
                 }
                 // save Notes
-                console.log(payload.userID)
+                console.log(payload.userID);
                 var newNotes = new notesModel({
                     title: args.title,
                     UserID: payload.userID,
                     labelID: args.labelID,
                     description: args.description
-                })
-                var saveNote = await newNotes.save()
+                });
+                var saveNote = await newNotes.save();
                 if (saveNote) {
                     return {
                         message: 'Note added',
                         success: true
-                    }
+                    };
                 } else {
                     return {
                         message: 'Note cannot be added',
                         success: false
-                    }
+                    };
                 }
             } else {
                 return {
                     message: 'Note cannot be added',
                     success: false
-                }
+                };
             }
         } else {
             return {
                 message: 'token not provided',
                 success: false
-            }
+            };
         }
     } catch (err) {
-        logger.error(err.message)
+        logger.error(err.message);
         if (err instanceof ReferenceError ||
             err instanceof SyntaxError ||
             err instanceof TypeError ||
             err instanceof RangeError) {
-            return result
+            return result;
         } else {
-            result.message = err.message
-            return result
+            result.message = err.message;
+            return result;
         }
     }
-}
+};
 
 /**
  * @description : remove notes
@@ -88,57 +88,57 @@ exports.removeNote = async (root, args, context) => {
     const result = {
         message: 'Something bad happened',
         success: false
-    }
+    };
     try {
         // check if token is provided
         if (context.token) {
             // verify token
-            var payload = await jwt.verify(context.token, process.env.APP_SECRET)
+            var payload = await jwt.verify(context.token, process.env.APP_SECRET);
             if (payload) {
                 var removedNote = await notesModel.findOneAndDelete({
                     _id: args.noteID
-                })
+                });
                 if (removedNote) {
                     // return note removed
                     return {
                         message: 'Note Removed',
                         success: true
-                    }
+                    };
                 } else {
                     // return unable to remove note
                     return {
                         message: 'Unable to remove Note',
                         success: false
-                    }
+                    };
                 }
             } else {
                 // return un authorized
                 return {
                     message: 'Un Auth',
                     success: false
-                }
+                };
             }
         } else {
             // return token not provided
             return {
                 message: 'token not provided',
                 success: false
-            }
+            };
         }
     } catch (err) {
-        logger.error(err.message)
+        logger.error(err.message);
         // return error
         if (err instanceof ReferenceError ||
             err instanceof SyntaxError ||
             err instanceof TypeError ||
             err instanceof RangeError) {
-            return result
+            return result;
         } else {
-            result.message = err.message
-            return result
+            result.message = err.message;
+            return result;
         }
     }
-}
+};
 
 /**
  * @description : update notes
@@ -151,7 +151,7 @@ exports.updateNote = async (root, args, context) => {
     const result = {
         message: 'Something bad happened',
         success: false
-    }
+    };
     try {
         // check if token is provided
         if (context.token) {
@@ -160,10 +160,10 @@ exports.updateNote = async (root, args, context) => {
                 return {
                     message: 'title and description are required',
                     success: false
-                }
+                };
             }
             // verify token
-            var payload = await jwt.verify(context.token, process.env.APP_SECRET)
+            var payload = await jwt.verify(context.token, process.env.APP_SECRET);
             if (payload) {
                 // find label of user and update
                 var updateNote = await notesModel.findOneAndUpdate({
@@ -171,20 +171,20 @@ exports.updateNote = async (root, args, context) => {
                 }, {
                     title: args.title,
                     description: args.description
-                })
-                console.log(updateNote)
+                });
+                console.log(updateNote);
                 if (updateNote) {
                     // return note update success
                     return {
                         message: 'Note update success',
                         success: true
-                    }
+                    };
                 } else {
                     // return note connot update
                     return {
                         message: 'Note connot update',
                         success: false
-                    }
+                    };
                 }
             }
         } else {
@@ -192,22 +192,22 @@ exports.updateNote = async (root, args, context) => {
             return {
                 message: 'token not provided',
                 success: false
-            }
+            };
         }
     } catch (err) {
-        logger.error(err.message)
+        logger.error(err.message);
         // return error
         if (err instanceof ReferenceError ||
             err instanceof SyntaxError ||
             err instanceof TypeError ||
             err instanceof RangeError) {
-            return result
+            return result;
         } else {
-            result.message = err.message
-            return result
+            result.message = err.message;
+            return result;
         }
     }
-}
+};
 
 /**
  * @description : archive notes
@@ -220,20 +220,20 @@ exports.archive = async (root, args, context) => {
     const result = {
         message: 'Something bad happened',
         success: false
-    }
+    };
     // check if token provided
     try {
         if (context.token) {
-            var payload = await jwt.verify(context.token, process.env.APP_SECRET)
+            var payload = await jwt.verify(context.token, process.env.APP_SECRET);
             if (payload) {
                 var note = await notesModel.find({
                     _id: args.noteID
-                })
+                });
                 if (note[0].archive === true) {
                     return {
                         message: 'Already Archive',
                         success: false
-                    }
+                    };
                 }
                 if (note.length !== 0) {
                     // set reminder
@@ -243,35 +243,35 @@ exports.archive = async (root, args, context) => {
                         $set: {
                             archive: true
                         }
-                    })
+                    });
                     if (setArchive) {
                         return {
                             message: 'archive successfully',
                             success: true
-                        }
+                        };
                     } else {
-                        throw new Error('archive  unsuccessfully')
+                        throw new Error('archive  unsuccessfully');
                     }
                 } else {
-                    throw new Error('note not exists')
+                    throw new Error('note not exists');
                 }
             }
         } else {
-            throw new Error('token not provided')
+            throw new Error('token not provided');
         }
     } catch (err) {
-        logger.error(err.message)
+        logger.error(err.message);
         if (err instanceof ReferenceError ||
             err instanceof SyntaxError ||
             err instanceof TypeError ||
             err instanceof RangeError) {
-            return result
+            return result;
         } else {
-            result.message = err.message
-            return result
+            result.message = err.message;
+            return result;
         }
     }
-}
+};
 
 /**
  * @description unarchive notes
@@ -284,20 +284,20 @@ exports.unarchive = async (root, args, context) => {
     const result = {
         message: 'Something bad happened',
         success: false
-    }
+    };
     // check if token provided
     try {
         if (context.token) {
-            var payload = await jwt.verify(context.token, process.env.APP_SECRET)
+            var payload = await jwt.verify(context.token, process.env.APP_SECRET);
             if (payload) {
                 var note = await notesModel.find({
                     _id: args.noteID
-                })
+                });
                 if (note[0].archive === false) {
                     return {
                         message: 'Already Unarchive',
                         success: false
-                    }
+                    };
                 }
                 if (note.length !== 0) {
                     // set reminder
@@ -307,35 +307,35 @@ exports.unarchive = async (root, args, context) => {
                         $set: {
                             archive: false
                         }
-                    })
+                    });
                     if (setArchive) {
                         return {
                             message: 'unarchive successfully',
                             success: true
-                        }
+                        };
                     } else {
-                        throw new Error('unarchive unsuccessfully')
+                        throw new Error('unarchive unsuccessfully');
                     }
                 } else {
-                    throw new Error('note not exists')
+                    throw new Error('note not exists');
                 }
             }
         } else {
-            throw new Error('token not provided')
+            throw new Error('token not provided');
         }
     } catch (err) {
-        logger.error(err.message)
+        logger.error(err.message);
         if (err instanceof ReferenceError ||
             err instanceof SyntaxError ||
             err instanceof TypeError ||
             err instanceof RangeError) {
-            return result
+            return result;
         } else {
-            result.message = err.message
-            return result
+            result.message = err.message;
+            return result;
         }
     }
-}
+};
 
 /**
  * @description : trash notes
@@ -348,20 +348,20 @@ exports.trash = async (root, args, context) => {
     const result = {
         message: 'Something bad happened',
         success: false
-    }
+    };
     // check if token provided
     try {
         if (context.token) {
-            var payload = await jwt.verify(context.token, process.env.APP_SECRET)
+            var payload = await jwt.verify(context.token, process.env.APP_SECRET);
             if (payload) {
                 var note = await notesModel.find({
                     _id: args.noteID
-                })
+                });
                 if (note[0].trash === true) {
                     return {
                         message: 'Already Trash',
                         success: false
-                    }
+                    };
                 }
                 if (note.length !== 0) {
                     // set reminder
@@ -371,35 +371,35 @@ exports.trash = async (root, args, context) => {
                         $set: {
                             trash: true
                         }
-                    })
+                    });
                     if (setTrash) {
                         return {
                             message: 'trash  successfully',
                             success: true
-                        }
+                        };
                     } else {
-                        throw new Error('trash  unsuccessfully')
+                        throw new Error('trash  unsuccessfully');
                     }
                 } else {
-                    throw new Error('note not exists')
+                    throw new Error('note not exists');
                 }
             }
         } else {
-            throw new Error('token not provided')
+            throw new Error('token not provided');
         }
     } catch (err) {
-        logger.error(err.message)
+        logger.error(err.message);
         if (err instanceof ReferenceError ||
             err instanceof SyntaxError ||
             err instanceof TypeError ||
             err instanceof RangeError) {
-            return result
+            return result;
         } else {
-            result.message = err.message
-            return result
+            result.message = err.message;
+            return result;
         }
     }
-}
+};
 
 /**
  * @description : untrash notes
@@ -412,20 +412,20 @@ exports.untrash = async (root, args, context) => {
     const result = {
         message: 'Something bad happened',
         success: false
-    }
+    };
     // check if token provided
     try {
         if (context.token) {
-            var payload = await jwt.verify(context.token, process.env.APP_SECRET)
+            var payload = await jwt.verify(context.token, process.env.APP_SECRET);
             if (payload) {
                 var note = await notesModel.find({
                     _id: args.noteID
-                })
+                });
                 if (note[0].trash === false) {
                     return {
                         message: 'Already Untrash',
                         success: false
-                    }
+                    };
                 }
                 if (note.length !== 0) {
                     // set reminder
@@ -435,35 +435,35 @@ exports.untrash = async (root, args, context) => {
                         $set: {
                             trash: false
                         }
-                    })
+                    });
                     if (setTrash) {
                         return {
                             message: 'Untrash  Successfully',
                             success: true
-                        }
+                        };
                     } else {
-                        throw new Error('Untrash  Unsuccessfully')
+                        throw new Error('Untrash  Unsuccessfully');
                     }
                 } else {
-                    throw new Error('Note Not Exists')
+                    throw new Error('Note Not Exists');
                 }
             }
         } else {
-            throw new Error('Token not provided')
+            throw new Error('Token not provided');
         }
     } catch (err) {
-        logger.error(err.message)
+        logger.error(err.message);
         if (err instanceof ReferenceError ||
             err instanceof SyntaxError ||
             err instanceof TypeError ||
             err instanceof RangeError) {
-            return result
+            return result;
         } else {
-            result.message = err.message
-            return result
+            result.message = err.message;
+            return result;
         }
     }
-}
+};
 
 /**
  * @description       : add reminder to notes
@@ -475,16 +475,16 @@ exports.addReminder = async (root, args, context) => {
     const result = {
         message: 'Something bad happened',
         success: false
-    }
+    };
     // check if token provided
     try {
         if (context.token) {
-            var payload = await jwt.verify(context.token, process.env.APP_SECRET)
+            var payload = await jwt.verify(context.token, process.env.APP_SECRET);
             if (payload) {
                 var note = await notesModel.find({
                     _id: args.noteID
-                })
-                var reminder = new Date(args.reminder)
+                });
+                var reminder = new Date(args.reminder);
                 if (note.length > 0) {
                     // set reminder
                     var setReminder = await notesModel.findOneAndUpdate({
@@ -493,35 +493,35 @@ exports.addReminder = async (root, args, context) => {
                         $set: {
                             reminders: reminder
                         }
-                    })
+                    });
                     if (setReminder) {
                         return {
                             message: 'set Reminder  successfully',
                             success: true
-                        }
+                        };
                     } else {
-                        throw new Error('set Reminder  unsuccessfully')
+                        throw new Error('set Reminder  unsuccessfully');
                     }
                 } else {
-                    throw new Error('note not exists')
+                    throw new Error('note not exists');
                 }
             }
         } else {
-            throw new Error('token not provided')
+            throw new Error('token not provided');
         }
     } catch (err) {
-        logger.error(err.message)
+        logger.error(err.message);
         if (err instanceof ReferenceError ||
             err instanceof SyntaxError ||
             err instanceof TypeError ||
             err instanceof RangeError) {
-            return result
+            return result;
         } else {
-            result.message = err.message
-            return result
+            result.message = err.message;
+            return result;
         }
     }
-}
+};
 
 /**
  * @description : save git repositories name as title of notes
@@ -534,77 +534,77 @@ exports.fetchGitRepo = async (root, args, context) => {
     const result = {
         message: 'Something bad happened',
         success: false
-    }
+    };
     try {
         if (context.token) {
-            var payload = await jwt.verify(context.token, process.env.APP_SECRET)
+            var payload = await jwt.verify(context.token, process.env.APP_SECRET);
             if (payload) {
                 var user = await userModel.find({
                     _id: payload.user_ID
-                })
+                });
                 // check if user is logged in using git
                 if (user.length === 0) {
                     return {
                         message: 'not git user',
                         success: false
-                    }
+                    };
                 }
                 if (user[0].gitVerify === false) {
                     // return not git user
                     return {
                         message: 'git user not verified',
                         success: false
-                    }
+                    };
                 } else {
                     // get git access_token of user
-                    var access_token = user[0].gitToken
+                    var access_token = user[0].gitToken;
                 }
-                const url = `${process.env.GIT_REPO}?access_token=${access_token}`
-                const response = await axiosService('GET', url, access_token)
+                const url = `${process.env.GIT_REPO}?access_token=${access_token}`;
+                const response = await axiosService('GET', url, access_token);
 
-                console.log('Git Repositories=========>')
+                console.log('Git Repositories=========>');
 
                 for (var i = 0; i < response.data.length; i++) {
                     var findRepo = notesModel.find({
                         title: response.data[i].name
-                    })
-                    console.log(response.data[i].name)
+                    });
+                    console.log(response.data[i].name);
                     if (!findRepo.length > 0) {
                         var noteModel = new notesModel({
                             title: response.data[i].name,
                             description: response.data[i].name,
                             UserID: payload.user_ID
-                        })
-                        var noteSaved = await noteModel.save()
+                        });
+                        var noteSaved = await noteModel.save();
                     }
                 }
                 if (noteSaved) {
                     return {
                         message: 'git repository save succesfully'
-                    }
+                    };
                 } else {
                     return {
                         message: 'git repository save Unsuccesfully'
-                    }
+                    };
                 }
             } else {
-                throw new Error('user not exists')
+                throw new Error('user not exists');
             }
         } else {
             return {
                 message: 'token not provided'
-            }
+            };
         }
     } catch (err) {
-        logger.error(err.message)
+        logger.error(err.message);
         if (err instanceof ReferenceError ||
             err instanceof SyntaxError ||
             err instanceof TypeError ||
             err instanceof RangeError) {
-            return result
+            return result;
         } else {
-            result.message = err.message
-            return result
+            result.message = err.message;
+            return result;
         }
     }
-}
+};

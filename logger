@@ -1,442 +1,444 @@
 
-{"message":"Unable to remove label","level":"error"}
-{"message":"Not registered","level":"error"}
-{"message":"Not registered","level":"error"}
-{"message":"Email not varified","level":"error"}
-{"message":"invalid signature","level":"error"}
-{"message":"invalid signature","level":"error"}
-{"message":"invalid signature","level":"error"}
-{"message":"invalid signature","level":"error"}
-{"message":"invalid signature","level":"error"}
-{"message":"invalid signature","level":"error"}
-{"message":"invalid signature","level":"error"}
-{"message":"invalid signature","level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"message":"token not provided","level":"error"}
-{"message":"token not provided","level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"level":"error"}
-{"message":"code not provided","level":"error"}
-{"message":"code not provided","level":"error"}
-{"message":"Request failed with status code 422","level":"error"}
-{"message":"Request failed with status code 422","level":"error"}
-{"message":"Request failed with status code 422","level":"error"}
-{"message":"Request failed with status code 401","level":"error"}
-{"message":"Request failed with status code 401","level":"error"}
-{"message":"Request failed with status code 401","level":"error"}
-{"message":"Request failed with status code 401","level":"error"}
-{"message":"label already exits","level":"error"}
-{"message":"Unable to remove label","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Unable to remove label","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"label already exits","level":"error"}
-{"message":"label already exits","level":"error"}
-{"message":"label already exits","level":"error"}
-{"message":"label already exits","level":"error"}
-{"message":"token not provided","level":"error"}
-{"message":"token not provided","level":"error"}
-{"message":"token not provided","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"token not provided","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"remainder\"","level":"error"}
-{"message":"token not provided","level":"error"}
-{"message":"label already exits","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'trash' of undefined","level":"error"}
-{"message":"Cannot read property 'trash' of undefined","level":"error"}
-{"message":"Cannot read property 'trash' of undefined","level":"error"}
-{"message":"Cannot read property 'trash' of undefined","level":"error"}
-{"message":"Cannot read property 'trash' of undefined","level":"error"}
-{"message":"jwt malformed","level":"error"}
-{"message":"jwt malformed","level":"error"}
-{"message":"jwt malformed","level":"error"}
-{"message":"Cannot read property 'repositoryOwner' of undefined","level":"error"}
-{"message":"Cannot read property 'repositoryOwner' of undefined","level":"error"}
-{"message":"Cannot read property 'repositoryOwner' of undefined","level":"error"}
-{"message":"Cannot read property 'repositoryOwner' of undefined","level":"error"}
-{"message":"Cannot read property 'repositoryOwner' of undefined","level":"error"}
-{"message":"Cannot read property 'repositoryOwner' of undefined","level":"error"}
-{"message":"Cannot read property 'repositoryOwner' of undefined","level":"error"}
-{"message":"Cannot read property 'repositoryOwner' of undefined","level":"error"}
-{"message":"Cannot read property 'repositoryOwner' of undefined","level":"error"}
-{"message":"jwt malformed","level":"error"}
-{"message":"jwt malformed","level":"error"}
-{"message":"Cannot read property 'repositoryOwner' of undefined","level":"error"}
-{"message":"Cannot read property 'repositoryOwner' of undefined","level":"error"}
-{"message":"Cannot read property 'repositoryOwner' of undefined","level":"error"}
-{"message":"Cannot read property 'repositoryOwner' of undefined","level":"error"}
-{"message":"Cannot read property 'repositoryOwner' of undefined","level":"error"}
-{"message":"authentication is not a function","level":"error"}
-{"message":"Unable to remove label","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'trash' of undefined","level":"error"}
-{"message":"Cannot read property 'trash' of undefined","level":"error"}
-{"message":"authentication is not a function","level":"error"}
-{"message":"Unable to remove label","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'trash' of undefined","level":"error"}
-{"message":"Cannot read property 'trash' of undefined","level":"error"}
-{"message":"authentication is not a function","level":"error"}
-{"message":"Unable to remove label","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'archive' of undefined","level":"error"}
-{"message":"Cannot read property 'trash' of undefined","level":"error"}
-{"message":"Cannot read property 'trash' of undefined","level":"error"}
-{"message":"authentication is not a function","level":"error"}
-{"message":"authentication is not a function","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"title is not defined","level":"error"}
-{"message":"response is not defined","level":"error"}
-{"message":"Cannot read property 'name' of undefined","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"reminder not added successfully","level":"error"}
-{"message":"remainder is not defined","level":"error"}
-{"message":"remainder is not defined","level":"error"}
-{"message":"remainder is not defined","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"note not exists","level":"error"}
-{"message":"authentication is not a function","level":"error"}
-{"message":"jwt is not defined","level":"error"}
-{"message":"Request failed with status code 401","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"shaRes is not defined","level":"error"}
-{"message":"data is not defined","level":"error"}
-{"message":"Request failed with status code 422","level":"error"}
-{"message":"uri is not defined","level":"error"}
-{"message":"uri is not defined","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"Request failed with status code 401","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"only absolute urls are supported","level":"error"}
-{"message":"Request failed with status code 422","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"query is not defined","level":"error"}
-{"message":"query is not defined","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"Request failed with status code 404","level":"error"}
-{"message":"Request failed with status code 422","level":"error"}
-{"message":"Request failed with status code 422","level":"error"}
-{"message":"Request failed with status code 422","level":"error"}
-{"message":"Request failed with status code 422","level":"error"}
-{"message":"Request failed with status code 422","level":"error"}
-{"message":"Request failed with status code 422","level":"error"}
-{"message":"Request failed with status code 422","level":"error"}
-{"message":"note already colabrated","level":"error"}
-{"message":"note already colabrated","level":"error"}
-{"message":"colaboration remove unsuccessful","level":"error"}
-{"message":"colaboration remove unsuccessful","level":"error"}
-{"message":"user not found","level":"error"}
-{"message":"user not found","level":"error"}
-{"message":"user not found","level":"error"}
-{"message":"user not found","level":"error"}
-{"message":"user not found","level":"error"}
-{"message":"user not found","level":"error"}
-{"message":"user not found","level":"error"}
-{"message":"user not found","level":"error"}
-{"message":"user not found","level":"error"}
-{"message":"user not found","level":"error"}
-{"message":"user not found","level":"error"}
-{"message":"user not found","level":"error"}
-{"message":"user not found","level":"error"}
-{"message":"user not found","level":"error"}
-{"message":"user not found","level":"error"}
-{"message":"user not found","level":"error"}
-{"message":"user not found","level":"error"}
-{"message":"user not found","level":"error"}
-{"message":"collaboration remove unsuccessful","level":"error"}
-{"message":"token not provided","level":"error"}
-{"message":"authentication is not a function","level":"error"}
-{"message":"authentication is not a function","level":"error"}
-{"message":"authentication is not a function","level":"error"}
-{"message":"authentication is not a function","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"note already collaborator","level":"error"}
-{"message":"note not found","level":"error"}
-{"message":"note not found","level":"error"}
-{"message":"note not found","level":"error"}
-{"message":"colabModel is not defined","level":"error"}
-{"message":"colabModel is not defined","level":"error"}
-{"message":"colabModel is not defined","level":"error"}
-{"message":"Cannot read property 'email' of undefined","level":"error"}
-{"message":"Cannot read property 'email' of undefined","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"colModel is not defined","level":"error"}
-{"message":"colModel is not defined","level":"error"}
-{"message":"colaboration remove unsuccessful","level":"error"}
-{"message":"colaboration remove unsuccessful","level":"error"}
-{"message":"colaboration remove unsuccessful","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"token not provided","level":"error"}
-{"message":"token not provided","level":"error"}
-{"message":"collboratorUser is not defined","level":"error"}
-{"message":"collboratorUser is not defined","level":"error"}
-{"message":"collboratorUser is not defined","level":"error"}
-{"message":"colModel is not defined","level":"error"}
-{"message":"colModel is not defined","level":"error"}
-{"message":"authentication is not a function","level":"error"}
-{"message":"authentication is not a function","level":"error"}
-{"message":"authentication is not a function","level":"error"}
-{"message":"authentication is not a function","level":"error"}
-{"message":"awaitjwt is not defined","level":"error"}
-{"message":"label already exits","level":"error"}
-{"message":"label already exits","level":"error"}
-{"message":"email already exists","level":"error"}
-{"message":"email already exists","level":"error"}
-{"message":"token not provided","level":"error"}
-{"message":"note already colabrated","level":"error"}
-{"message":"colaboration remove unsuccessful","level":"error"}
-{"message":"no such collaborator user","level":"error"}
-{"message":"colaboration remove unsuccessful","level":"error"}
-{"message":"colaboration remove unsuccessful","level":"error"}
-{"message":"colaboration remove unsuccessful","level":"error"}
-{"message":"colaboration remove unsuccessful","level":"error"}
-{"message":"colaboration remove unsuccessful","level":"error"}
-{"message":"notes is not defined","level":"error"}
-{"message":"Cannot read property 'length' of undefined","level":"error"}
-{"message":"Cannot read property 'length' of undefined","level":"error"}
-{"message":"Cannot read property 'length' of undefined","level":"error"}
-{"message":"token not provided","level":"error"}
-{"message":"Cast to date failed for value \"Invalid Date\" at path \"reminders\"","level":"error"}
-{"message":"Cast to date failed for value \"NaN\" at path \"reminders\"","level":"error"}
-{"message":"Cast to date failed for value \"NaN\" at path \"reminders\"","level":"error"}
-{"message":"Cast to date failed for value \"NaN\" at path \"reminders\"","level":"error"}
-{"message":"Cast to date failed for value \"NaN\" at path \"reminders\"","level":"error"}
-{"message":"Cast to date failed for value \"NaN\" at path \"reminders\"","level":"error"}
-{"message":"Cast to date failed for value \"NaN\" at path \"reminders\"","level":"error"}
-{"message":"Cast to date failed for value \"NaN\" at path \"reminders\"","level":"error"}
-{"message":"Not registered","level":"error"}
-{"message":"Not registered","level":"error"}
-{"message":"logger.err is not a function","level":"error"}
-{"level":"error","message":"not register"}
-{"message":"Not registered","level":"error"}
-{"message":"email already exists","level":"error"}
-{"message":"Email not varified","level":"error"}
-{"message":"jwt must be provided","level":"error"}
-{"message":"data is not defined","level":"error"}
-{"message":"data is not defined","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Email verification not successfully","level":"error"}
-{"message":"Cannot read property '_id' of undefined","level":"error"}
-{"message":"email already exists","level":"error"}
-{"message":"email already exists","level":"error"}
-{"message":"tokenName is not defined","level":"error"}
-{"message":"email already exists","level":"error"}
-{"message":"amqplib is not defined","level":"error"}
-{"message":"email already exists","level":"error"}
+{'message':'Unable to remove label','level':'error'}
+{'message':'Not registered','level':'error'}
+{'message':'Not registered','level':'error'}
+{'message':'Email not varified','level':'error'}
+{'message':'invalid signature','level':'error'}
+{'message':'invalid signature','level':'error'}
+{'message':'invalid signature','level':'error'}
+{'message':'invalid signature','level':'error'}
+{'message':'invalid signature','level':'error'}
+{'message':'invalid signature','level':'error'}
+{'message':'invalid signature','level':'error'}
+{'message':'invalid signature','level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'message':'token not provided','level':'error'}
+{'message':'token not provided','level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'level':'error'}
+{'message':'code not provided','level':'error'}
+{'message':'code not provided','level':'error'}
+{'message':'Request failed with status code 422','level':'error'}
+{'message':'Request failed with status code 422','level':'error'}
+{'message':'Request failed with status code 422','level':'error'}
+{'message':'Request failed with status code 401','level':'error'}
+{'message':'Request failed with status code 401','level':'error'}
+{'message':'Request failed with status code 401','level':'error'}
+{'message':'Request failed with status code 401','level':'error'}
+{'message':'label already exits','level':'error'}
+{'message':'Unable to remove label','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Unable to remove label','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'label already exits','level':'error'}
+{'message':'label already exits','level':'error'}
+{'message':'label already exits','level':'error'}
+{'message':'label already exits','level':'error'}
+{'message':'token not provided','level':'error'}
+{'message':'token not provided','level':'error'}
+{'message':'token not provided','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'token not provided','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'remainder\'','level':'error'}
+{'message':'token not provided','level':'error'}
+{'message':'label already exits','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'trash' of undefined','level':'error'}
+{'message':'Cannot read property 'trash' of undefined','level':'error'}
+{'message':'Cannot read property 'trash' of undefined','level':'error'}
+{'message':'Cannot read property 'trash' of undefined','level':'error'}
+{'message':'Cannot read property 'trash' of undefined','level':'error'}
+{'message':'jwt malformed','level':'error'}
+{'message':'jwt malformed','level':'error'}
+{'message':'jwt malformed','level':'error'}
+{'message':'Cannot read property 'repositoryOwner' of undefined','level':'error'}
+{'message':'Cannot read property 'repositoryOwner' of undefined','level':'error'}
+{'message':'Cannot read property 'repositoryOwner' of undefined','level':'error'}
+{'message':'Cannot read property 'repositoryOwner' of undefined','level':'error'}
+{'message':'Cannot read property 'repositoryOwner' of undefined','level':'error'}
+{'message':'Cannot read property 'repositoryOwner' of undefined','level':'error'}
+{'message':'Cannot read property 'repositoryOwner' of undefined','level':'error'}
+{'message':'Cannot read property 'repositoryOwner' of undefined','level':'error'}
+{'message':'Cannot read property 'repositoryOwner' of undefined','level':'error'}
+{'message':'jwt malformed','level':'error'}
+{'message':'jwt malformed','level':'error'}
+{'message':'Cannot read property 'repositoryOwner' of undefined','level':'error'}
+{'message':'Cannot read property 'repositoryOwner' of undefined','level':'error'}
+{'message':'Cannot read property 'repositoryOwner' of undefined','level':'error'}
+{'message':'Cannot read property 'repositoryOwner' of undefined','level':'error'}
+{'message':'Cannot read property 'repositoryOwner' of undefined','level':'error'}
+{'message':'authentication is not a function','level':'error'}
+{'message':'Unable to remove label','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'trash' of undefined','level':'error'}
+{'message':'Cannot read property 'trash' of undefined','level':'error'}
+{'message':'authentication is not a function','level':'error'}
+{'message':'Unable to remove label','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'trash' of undefined','level':'error'}
+{'message':'Cannot read property 'trash' of undefined','level':'error'}
+{'message':'authentication is not a function','level':'error'}
+{'message':'Unable to remove label','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'archive' of undefined','level':'error'}
+{'message':'Cannot read property 'trash' of undefined','level':'error'}
+{'message':'Cannot read property 'trash' of undefined','level':'error'}
+{'message':'authentication is not a function','level':'error'}
+{'message':'authentication is not a function','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'title is not defined','level':'error'}
+{'message':'response is not defined','level':'error'}
+{'message':'Cannot read property 'name' of undefined','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'reminder not added successfully','level':'error'}
+{'message':'remainder is not defined','level':'error'}
+{'message':'remainder is not defined','level':'error'}
+{'message':'remainder is not defined','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'note not exists','level':'error'}
+{'message':'authentication is not a function','level':'error'}
+{'message':'jwt is not defined','level':'error'}
+{'message':'Request failed with status code 401','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'shaRes is not defined','level':'error'}
+{'message':'data is not defined','level':'error'}
+{'message':'Request failed with status code 422','level':'error'}
+{'message':'uri is not defined','level':'error'}
+{'message':'uri is not defined','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'Request failed with status code 401','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'only absolute urls are supported','level':'error'}
+{'message':'Request failed with status code 422','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'query is not defined','level':'error'}
+{'message':'query is not defined','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'Request failed with status code 404','level':'error'}
+{'message':'Request failed with status code 422','level':'error'}
+{'message':'Request failed with status code 422','level':'error'}
+{'message':'Request failed with status code 422','level':'error'}
+{'message':'Request failed with status code 422','level':'error'}
+{'message':'Request failed with status code 422','level':'error'}
+{'message':'Request failed with status code 422','level':'error'}
+{'message':'Request failed with status code 422','level':'error'}
+{'message':'note already colabrated','level':'error'}
+{'message':'note already colabrated','level':'error'}
+{'message':'colaboration remove unsuccessful','level':'error'}
+{'message':'colaboration remove unsuccessful','level':'error'}
+{'message':'user not found','level':'error'}
+{'message':'user not found','level':'error'}
+{'message':'user not found','level':'error'}
+{'message':'user not found','level':'error'}
+{'message':'user not found','level':'error'}
+{'message':'user not found','level':'error'}
+{'message':'user not found','level':'error'}
+{'message':'user not found','level':'error'}
+{'message':'user not found','level':'error'}
+{'message':'user not found','level':'error'}
+{'message':'user not found','level':'error'}
+{'message':'user not found','level':'error'}
+{'message':'user not found','level':'error'}
+{'message':'user not found','level':'error'}
+{'message':'user not found','level':'error'}
+{'message':'user not found','level':'error'}
+{'message':'user not found','level':'error'}
+{'message':'user not found','level':'error'}
+{'message':'collaboration remove unsuccessful','level':'error'}
+{'message':'token not provided','level':'error'}
+{'message':'authentication is not a function','level':'error'}
+{'message':'authentication is not a function','level':'error'}
+{'message':'authentication is not a function','level':'error'}
+{'message':'authentication is not a function','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'note already collaborator','level':'error'}
+{'message':'note not found','level':'error'}
+{'message':'note not found','level':'error'}
+{'message':'note not found','level':'error'}
+{'message':'colabModel is not defined','level':'error'}
+{'message':'colabModel is not defined','level':'error'}
+{'message':'colabModel is not defined','level':'error'}
+{'message':'Cannot read property 'email' of undefined','level':'error'}
+{'message':'Cannot read property 'email' of undefined','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'colModel is not defined','level':'error'}
+{'message':'colModel is not defined','level':'error'}
+{'message':'colaboration remove unsuccessful','level':'error'}
+{'message':'colaboration remove unsuccessful','level':'error'}
+{'message':'colaboration remove unsuccessful','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'token not provided','level':'error'}
+{'message':'token not provided','level':'error'}
+{'message':'collboratorUser is not defined','level':'error'}
+{'message':'collboratorUser is not defined','level':'error'}
+{'message':'collboratorUser is not defined','level':'error'}
+{'message':'colModel is not defined','level':'error'}
+{'message':'colModel is not defined','level':'error'}
+{'message':'authentication is not a function','level':'error'}
+{'message':'authentication is not a function','level':'error'}
+{'message':'authentication is not a function','level':'error'}
+{'message':'authentication is not a function','level':'error'}
+{'message':'awaitjwt is not defined','level':'error'}
+{'message':'label already exits','level':'error'}
+{'message':'label already exits','level':'error'}
+{'message':'email already exists','level':'error'}
+{'message':'email already exists','level':'error'}
+{'message':'token not provided','level':'error'}
+{'message':'note already colabrated','level':'error'}
+{'message':'colaboration remove unsuccessful','level':'error'}
+{'message':'no such collaborator user','level':'error'}
+{'message':'colaboration remove unsuccessful','level':'error'}
+{'message':'colaboration remove unsuccessful','level':'error'}
+{'message':'colaboration remove unsuccessful','level':'error'}
+{'message':'colaboration remove unsuccessful','level':'error'}
+{'message':'colaboration remove unsuccessful','level':'error'}
+{'message':'notes is not defined','level':'error'}
+{'message':'Cannot read property 'length' of undefined','level':'error'}
+{'message':'Cannot read property 'length' of undefined','level':'error'}
+{'message':'Cannot read property 'length' of undefined','level':'error'}
+{'message':'token not provided','level':'error'}
+{'message':'Cast to date failed for value \'Invalid Date\' at path \'reminders\'','level':'error'}
+{'message':'Cast to date failed for value \'NaN\' at path \'reminders\'','level':'error'}
+{'message':'Cast to date failed for value \'NaN\' at path \'reminders\'','level':'error'}
+{'message':'Cast to date failed for value \'NaN\' at path \'reminders\'','level':'error'}
+{'message':'Cast to date failed for value \'NaN\' at path \'reminders\'','level':'error'}
+{'message':'Cast to date failed for value \'NaN\' at path \'reminders\'','level':'error'}
+{'message':'Cast to date failed for value \'NaN\' at path \'reminders\'','level':'error'}
+{'message':'Cast to date failed for value \'NaN\' at path \'reminders\'','level':'error'}
+{'message':'Not registered','level':'error'}
+{'message':'Not registered','level':'error'}
+{'message':'logger.err is not a function','level':'error'}
+{'level':'error','message':'not register'}
+{'message':'Not registered','level':'error'}
+{'message':'email already exists','level':'error'}
+{'message':'Email not varified','level':'error'}
+{'message':'jwt must be provided','level':'error'}
+{'message':'data is not defined','level':'error'}
+{'message':'data is not defined','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Email verification not successfully','level':'error'}
+{'message':'Cannot read property '_id' of undefined','level':'error'}
+{'message':'email already exists','level':'error'}
+{'message':'email already exists','level':'error'}
+{'message':'tokenName is not defined','level':'error'}
+{'message':'email already exists','level':'error'}
+{'message':'amqplib is not defined','level':'error'}
+{'message':'email already exists','level':'error'}
+{'message':'password must have atleast 8 char','level':'error'}
+{'message':'sendMail is not a function','level':'error'}
