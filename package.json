@@ -13,7 +13,7 @@
   "dependencies": {
     "amqplib": "^0.5.5",
     "apollo-fetch": "^0.7.0",
-    "apollo-server": "^2.7.2",
+    "apollo-server": "^2.25.3",
     "apollo-server-express": "^2.7.2",
     "async-redis": "^1.1.7",
     "aws-sdk": "^2.501.0",
